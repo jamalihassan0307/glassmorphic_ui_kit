@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Roboto',
       ),
-      initialRoute: '/components',
+      initialRoute: '/',
       routes: {
         '/': (context) => const MainScreen(),
         '/components': (context) => const ComponentsScreen(),
@@ -54,7 +54,9 @@ class MainScreen extends StatelessWidget {
           ),
         ),
         child: const SafeArea(
-          child: ComponentsScreen(),
+          child: Center(
+            child: Text('Open Drawer and navigate to other screens'),
+          ),
         ),
       ),
     );
