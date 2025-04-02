@@ -98,13 +98,13 @@ void main() {
             body: GlassNavigationBar(
               selectedIndex: selectedIndex,
               onDestinationSelected: (index) => selectedIndex = index,
-              destinations: [
+              destinations: const [
                 GlassNavigationDestination(
-                  icon: const Icon(Icons.home),
+                  icon: Icon(Icons.home),
                   label: 'Home',
                 ),
                 GlassNavigationDestination(
-                  icon: const Icon(Icons.search),
+                  icon: Icon(Icons.search),
                   label: 'Search',
                 ),
               ],
