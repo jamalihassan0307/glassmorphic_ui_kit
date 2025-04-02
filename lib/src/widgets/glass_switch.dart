@@ -129,9 +129,9 @@ class GlassSwitch extends StatelessWidget {
         activeColor: activeColor ?? defaultActiveColor,
         inactiveThumbColor: inactiveColor ?? defaultInactiveColor,
         activeTrackColor:
-            activeTrackColor ?? defaultActiveColor.withOpacity(0.5),
+            activeTrackColor ?? defaultActiveColor.withAlpha(128),
         inactiveTrackColor:
-            inactiveTrackColor ?? defaultInactiveColor.withOpacity(0.3),
+            inactiveTrackColor ?? defaultInactiveColor.withAlpha(77),
         activeThumbImage: activeThumbImage,
         inactiveThumbImage: inactiveThumbImage,
         thumbColor: thumbColor,
