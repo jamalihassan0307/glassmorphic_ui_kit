@@ -151,6 +151,322 @@ GlassProgressIndicator(
 )
 ```
 
+## Usage Examples 💻
+
+### Glass Container
+```dart
+GlassContainer(
+  width: 300,
+  height: 200,
+  blur: 20,
+  borderRadius: BorderRadius.circular(15),
+  gradient: LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Colors.white.withAlpha(51),
+      Colors.white.withAlpha(26),
+    ],
+  ),
+  child: Center(child: Text("Glassmorphic Container")),
+)
+```
+
+### Glass Button
+```dart
+GlassButton(
+  onPressed: () => print('Button pressed'),
+  blur: 10,
+  borderRadius: BorderRadius.circular(15),
+  gradient: LinearGradient(
+    colors: [
+      Colors.blue.withAlpha(77),
+      Colors.purple.withAlpha(51),
+    ],
+  ),
+  padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+  child: Row(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      Icon(Icons.add, color: Colors.white),
+      SizedBox(width: 8),
+      Text("Glass Button", style: TextStyle(color: Colors.white)),
+    ],
+  ),
+)
+```
+
+### Glass Card
+```dart
+GlassCard(
+  width: double.infinity,
+  height: 200,
+  blur: 20,
+  borderRadius: BorderRadius.circular(20),
+  gradient: LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Colors.white.withAlpha(51),
+      Colors.white.withAlpha(26),
+    ],
+  ),
+  child: Padding(
+    padding: EdgeInsets.all(16),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Glass Card Title",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 8),
+        Text(
+          "This is a card with glass effect that can contain any widget.",
+          style: TextStyle(color: Colors.white70),
+        ),
+      ],
+    ),
+  ),
+)
+```
+
+### Glass Navigation Bar
+```dart
+GlassNavigationBar(
+  selectedIndex: _currentIndex,
+  onDestinationSelected: (index) => setState(() => _currentIndex = index),
+  destinations: [
+    GlassNavigationDestination(
+      icon: Icon(Icons.home, color: Colors.white70),
+      selectedIcon: Icon(Icons.home, color: Colors.white),
+      label: 'Home',
+    ),
+    GlassNavigationDestination(
+      icon: Icon(Icons.search, color: Colors.white70),
+      selectedIcon: Icon(Icons.search, color: Colors.white),
+      label: 'Search',
+    ),
+    GlassNavigationDestination(
+      icon: Icon(Icons.person, color: Colors.white70),
+      selectedIcon: Icon(Icons.person, color: Colors.white),
+      label: 'Profile',
+    ),
+  ],
+)
+```
+
+### Glass Navigation Drawer
+```dart
+GlassNavigationDrawer(
+  blur: 10,
+  opacity: 0.2,
+  gradient: LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Colors.white.withAlpha(51),
+      Colors.white.withAlpha(26),
+    ],
+  ),
+  children: [
+    UserAccountsDrawerHeader(
+      decoration: BoxDecoration(color: Colors.transparent),
+      accountName: Text('John Doe'),
+      accountEmail: Text('john.doe@example.com'),
+      currentAccountPicture: CircleAvatar(
+        child: Icon(Icons.person),
+      ),
+    ),
+    ListTile(
+      leading: Icon(Icons.home, color: Colors.white),
+      title: Text('Home', style: TextStyle(color: Colors.white)),
+      onTap: () => Navigator.pop(context),
+    ),
+    ListTile(
+      leading: Icon(Icons.settings, color: Colors.white),
+      title: Text('Settings', style: TextStyle(color: Colors.white)),
+      onTap: () => Navigator.pop(context),
+    ),
+  ],
+)
+```
+
+### Glass Dialog
+```dart
+showDialog(
+  context: context,
+  builder: (context) => GlassDialog(
+    title: Text(
+      'Glass Dialog',
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    content: Text(
+      'This is a glassmorphic dialog with blur effect and gradient overlay.',
+      style: TextStyle(color: Colors.white),
+    ),
+    actions: [
+      GlassButton(
+        onPressed: () => Navigator.pop(context),
+        child: Text('Cancel', style: TextStyle(color: Colors.white)),
+      ),
+      GlassButton(
+        onPressed: () => Navigator.pop(context, true),
+        child: Text('Confirm', style: TextStyle(color: Colors.white)),
+      ),
+    ],
+  ),
+)
+```
+
+### Glass Bottom Sheet
+```dart
+showModalBottomSheet(
+  context: context,
+  backgroundColor: Colors.transparent,
+  builder: (context) => GlassContainer(
+    height: 300,
+    gradient: LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Colors.white.withAlpha(51),
+        Colors.white.withAlpha(26),
+      ],
+    ),
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        ListTile(
+          leading: Icon(Icons.share, color: Colors.white),
+          title: Text('Share', style: TextStyle(color: Colors.white)),
+          onTap: () => Navigator.pop(context),
+        ),
+        ListTile(
+          leading: Icon(Icons.edit, color: Colors.white),
+          title: Text('Edit', style: TextStyle(color: Colors.white)),
+          onTap: () => Navigator.pop(context),
+        ),
+      ],
+    ),
+  ),
+)
+```
+
+### Glass Slider
+```dart
+GlassSlider(
+  value: _sliderValue,
+  onChanged: (value) => setState(() => _sliderValue = value),
+  min: 0.0,
+  max: 100.0,
+  divisions: 10,
+  label: '${_sliderValue.round()}',
+  activeColor: Colors.white.withAlpha(200),
+  inactiveColor: Colors.white.withAlpha(100),
+  blur: 10,
+  borderRadius: BorderRadius.circular(10),
+)
+```
+
+### Glass Text Field
+```dart
+GlassTextField(
+  controller: _textController,
+  hintText: 'Enter text...',
+  blur: 10,
+  borderRadius: BorderRadius.circular(15),
+  gradient: LinearGradient(
+    colors: [
+      Colors.white.withAlpha(51),
+      Colors.white.withAlpha(26),
+    ],
+  ),
+  style: TextStyle(color: Colors.white),
+  cursorColor: Colors.white,
+  decoration: InputDecoration(
+    prefixIcon: Icon(Icons.search, color: Colors.white70),
+    border: InputBorder.none,
+    hintStyle: TextStyle(color: Colors.white70),
+  ),
+)
+```
+
+### Glass Progress Indicator
+```dart
+GlassProgressIndicator(
+  value: 0.7, // 70% progress
+  height: 8.0,
+  blur: 10,
+  borderRadius: BorderRadius.circular(4),
+  gradient: LinearGradient(
+    colors: [
+      Colors.blue.withAlpha(77),
+      Colors.purple.withAlpha(51),
+    ],
+  ),
+)
+```
+
+### Animated Glass Container
+```dart
+AnimatedGlassContainer(
+  duration: Duration(milliseconds: 500),
+  width: _isExpanded ? 300 : 200,
+  height: _isExpanded ? 200 : 100,
+  blur: _isExpanded ? 20 : 10,
+  gradient: LinearGradient(
+    colors: [
+      Colors.white.withAlpha(_isExpanded ? 51 : 26),
+      Colors.white.withAlpha(_isExpanded ? 26 : 13),
+    ],
+  ),
+  child: Center(
+    child: Text(
+      "Tap to Animate",
+      style: TextStyle(color: Colors.white),
+    ),
+  ),
+)
+```
+
+## Theming 🎨
+
+You can create a consistent glass effect theme across your app:
+
+```dart
+final glassTheme = GlassTheme(
+  blur: 10.0,
+  opacity: 0.2,
+  borderRadius: BorderRadius.circular(15),
+  gradient: LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Colors.white.withAlpha(51),
+      Colors.white.withAlpha(26),
+    ],
+  ),
+);
+
+// Use the theme
+GlassContainer(
+  blur: glassTheme.blur,
+  opacity: glassTheme.opacity,
+  borderRadius: glassTheme.borderRadius,
+  gradient: glassTheme.gradient,
+  child: YourWidget(),
+)
+```
+
 ## Additional Information 📚
 
 ### Customization
