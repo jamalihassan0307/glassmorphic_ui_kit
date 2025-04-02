@@ -57,15 +57,28 @@ class GlassNavigationBar extends StatelessWidget {
   }
 }
 
-/// A destination item for [GlassNavigationBar].
+/// A navigation destination with a glassmorphic effect.
 class GlassNavigationDestination extends NavigationDestination {
+  /// The size of the icon.
   final double iconSize;
+
+  /// The color of the selected icon.
   final Color? selectedIconColor;
+
+  /// The color of the unselected icon.
   final Color? unselectedIconColor;
+
+  /// The color of the selected label.
   final Color? selectedLabelColor;
+
+  /// The color of the unselected label.
   final Color? unselectedLabelColor;
 
-  GlassNavigationDestination({
+  /// Creates a glass navigation destination.
+  ///
+  /// The [icon] and [label] parameters are required.
+  /// The [iconSize] parameter defaults to 24.0.
+  const GlassNavigationDestination({
     Key? key,
     required Widget icon,
     required String label,
