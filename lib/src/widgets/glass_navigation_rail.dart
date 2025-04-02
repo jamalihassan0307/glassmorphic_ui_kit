@@ -2,64 +2,62 @@ import 'package:flutter/material.dart';
 import 'glass_container.dart';
 import '../utils/glass_constants.dart';
 
-/// A navigation rail with a glassmorphic effect.
+/// A Material Design navigation rail with a glassmorphic effect.
+///
+/// A navigation rail provides an application with a side navigation that can be
+/// expanded or collapsed. The rail is typically used for apps with multiple top-level
+/// destinations that require quick switching between views.
 class GlassNavigationRail extends StatelessWidget {
-  final List<GlassNavigationRailDestination> destinations;
+  /// The index into [destinations] for the current selected destination.
   final int selectedIndex;
-  final ValueChanged<int>? onDestinationSelected;
-  final Widget? leading;
-  final Widget? trailing;
-  final double blur;
-  final double opacity;
-  final BorderRadius? borderRadius;
-  final Gradient? gradient;
-  final double? width;
-  final bool extended;
-  final bool useIndicator;
-  final Color? indicatorColor;
-  final NavigationRailLabelType labelType;
 
+  /// Called when one of the [destinations] is selected.
+  final ValueChanged<int>? onDestinationSelected;
+
+  /// The entries to be displayed in the rail.
+  final List<GlassNavigationRailDestination> destinations;
+
+  /// An optional leading widget that is placed above the destinations.
+  final Widget? leading;
+
+  /// The intensity of the blur effect.
+  ///
+  /// Defaults to [GlassConstants.defaultBlur].
+  final double blur;
+
+  /// The opacity of the glass effect.
+  ///
+  /// Defaults to [GlassConstants.defaultOpacity].
+  final double opacity;
+
+  /// Optional gradient to be applied over the blur effect.
+  final Gradient? gradient;
+
+  /// Creates a glass navigation rail.
+  ///
+  /// The [selectedIndex] must be a valid index in [destinations].
   const GlassNavigationRail({
     Key? key,
-    required this.destinations,
     required this.selectedIndex,
-    this.onDestinationSelected,
+    required this.onDestinationSelected,
+    required this.destinations,
     this.leading,
-    this.trailing,
     this.blur = GlassConstants.defaultBlur,
     this.opacity = GlassConstants.defaultOpacity,
-    this.borderRadius,
     this.gradient,
-    this.width,
-    this.extended = false,
-    this.useIndicator = true,
-    this.indicatorColor,
-    this.labelType = NavigationRailLabelType.all,
-  })  : assert(destinations.length >= 2),
-        assert(selectedIndex >= 0 && selectedIndex < destinations.length),
-        super(key: key);
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GlassContainer(
-      width: width,
       blur: blur,
       opacity: opacity,
-      borderRadius: borderRadius ??
-          const BorderRadius.horizontal(
-            right: Radius.circular(16),
-          ),
       gradient: gradient,
       child: NavigationRail(
         selectedIndex: selectedIndex,
         onDestinationSelected: onDestinationSelected,
-        destinations: destinations,
         leading: leading,
-        trailing: trailing,
-        extended: extended,
-        useIndicator: useIndicator,
-        indicatorColor: indicatorColor,
-        labelType: labelType,
+        destinations: destinations,
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
@@ -67,46 +65,20 @@ class GlassNavigationRail extends StatelessWidget {
   }
 }
 
-/// A destination item for [GlassNavigationRail].
+/// A Material Design destination within a [GlassNavigationRail].
 class GlassNavigationRailDestination extends NavigationRailDestination {
-  final double iconSize;
-  final Color? selectedIconColor;
-  final Color? unselectedIconColor;
-  final Color? selectedLabelColor;
-  final Color? unselectedLabelColor;
-
-  GlassNavigationRailDestination({
+  /// Creates a glass navigation rail destination.
+  ///
+  /// The [icon] and [label] arguments must not be null.
+  const GlassNavigationRailDestination({
     Key? key,
     required Widget icon,
     required Widget label,
     Widget? selectedIcon,
-    this.iconSize = 24.0,
-    this.selectedIconColor,
-    this.unselectedIconColor,
-    this.selectedLabelColor,
-    this.unselectedLabelColor,
   }) : super(
-          icon: IconTheme(
-            data: IconThemeData(
-              size: iconSize,
-              color: unselectedIconColor ?? Colors.white70,
-            ),
-            child: icon,
-          ),
-          selectedIcon: selectedIcon != null
-              ? IconTheme(
-                  data: IconThemeData(
-                    size: iconSize,
-                    color: selectedIconColor ?? Colors.white,
-                  ),
-                  child: selectedIcon,
-                )
-              : null,
-          label: DefaultTextStyle(
-            style: TextStyle(
-              color: unselectedLabelColor ?? Colors.white70,
-            ),
-            child: label,
-          ),
+          key: key,
+          icon: icon,
+          label: label,
+          selectedIcon: selectedIcon,
         );
 }
