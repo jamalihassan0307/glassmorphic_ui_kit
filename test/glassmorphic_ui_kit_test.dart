@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 void main() {
   group('GlassContainer Tests', () {
-    testWidgets('GlassContainer creates glass effect', (WidgetTester tester) async {
+    testWidgets('GlassContainer creates glass effect',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
@@ -26,7 +27,8 @@ void main() {
       expect(find.text('Test'), findsOneWidget);
     });
 
-    testWidgets('GlassContainer applies custom blur', (WidgetTester tester) async {
+    testWidgets('GlassContainer applies custom blur',
+        (WidgetTester tester) async {
       const double customBlur = 20.0;
       await tester.pumpWidget(
         const MaterialApp(
@@ -66,7 +68,8 @@ void main() {
   });
 
   group('GlassCard Tests', () {
-    testWidgets('GlassCard renders with correct dimensions', (WidgetTester tester) async {
+    testWidgets('GlassCard renders with correct dimensions',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
