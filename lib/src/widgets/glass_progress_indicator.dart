@@ -2,51 +2,78 @@ import 'package:flutter/material.dart';
 import 'glass_container.dart';
 import '../utils/glass_constants.dart';
 
-/// A glassmorphic progress indicator widget.
-class GlassProgressIndicator extends StatelessWidget {
-  final double value;
-  final double height;
-  final double blur;
-  final double opacity;
-  final BorderRadius? borderRadius;
-  final Gradient? backgroundGradient;
-  final Gradient? progressGradient;
+/// The type of progress indicator to display.
+enum GlassProgressType {
+  /// A linear progress indicator that displays progress along a line.
+  linear,
 
+  /// A circular progress indicator that displays progress along a circle.
+  circular,
+}
+
+/// A Material Design progress indicator with a glassmorphic effect.
+///
+/// This widget creates either a linear or circular progress indicator with
+/// a frosted glass appearance.
+class GlassProgressIndicator extends StatelessWidget {
+  /// The type of progress indicator to display.
+  ///
+  /// Defaults to [GlassProgressType.linear].
+  final GlassProgressType type;
+
+  /// The value of the progress indicator.
+  ///
+  /// If null, the progress indicator will be indeterminate.
+  final double? value;
+
+  /// The intensity of the blur effect.
+  ///
+  /// Defaults to [GlassConstants.defaultBlur].
+  final double blur;
+
+  /// The opacity of the glass effect.
+  ///
+  /// Defaults to [GlassConstants.defaultOpacity].
+  final double opacity;
+
+  /// Optional gradient to be applied over the blur effect.
+  final Gradient? gradient;
+
+  /// Creates a glass progress indicator.
+  ///
+  /// The [type] determines whether the indicator is linear or circular.
   const GlassProgressIndicator({
     Key? key,
-    required this.value,
-    this.height = 8.0,
+    this.type = GlassProgressType.linear,
+    this.value,
     this.blur = GlassConstants.defaultBlur,
     this.opacity = GlassConstants.defaultOpacity,
-    this.borderRadius,
-    this.backgroundGradient,
-    this.progressGradient,
-  })  : assert(value >= 0.0 && value <= 1.0),
-        super(key: key);
+    this.gradient,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GlassContainer(
-      height: height,
       blur: blur,
       opacity: opacity,
-      borderRadius: borderRadius ?? BorderRadius.circular(height / 2),
-      gradient: backgroundGradient,
-      child: FractionallySizedBox(
-        alignment: Alignment.centerLeft,
-        widthFactor: value,
-        child: GlassContainer(
-          blur: blur,
-          opacity: opacity,
-          borderRadius: borderRadius ?? BorderRadius.circular(height / 2),
-          gradient: progressGradient ??
-              LinearGradient(
-                colors: [
-                  Colors.white.withAlpha(102), // 0.4 opacity
-                  Colors.white.withAlpha(51), // 0.2 opacity
-                ],
+      gradient: gradient,
+      borderRadius: type == GlassProgressType.linear
+          ? BorderRadius.circular(4)
+          : BorderRadius.circular(25),
+      child: SizedBox(
+        width: type == GlassProgressType.linear ? 200 : 50,
+        height: type == GlassProgressType.linear ? 4 : 50,
+        child: type == GlassProgressType.linear
+            ? LinearProgressIndicator(
+                value: value,
+                backgroundColor: Colors.white24,
+                valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
+              )
+            : CircularProgressIndicator(
+                value: value,
+                backgroundColor: Colors.white24,
+                valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
               ),
-        ),
       ),
     );
   }
