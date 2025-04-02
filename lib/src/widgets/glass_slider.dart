@@ -194,26 +194,82 @@ class GlassSlider extends StatelessWidget {
 }
 
 /// A range slider with a glassmorphic effect.
+///
+/// This widget provides a customizable range slider control with a frosted glass appearance.
+/// It supports all standard range slider functionality with additional glassmorphic styling options.
+///
+/// Example:
+/// ```dart
+/// GlassRangeSlider(
+///   values: _values,
+///   onChanged: (values) => setState(() => _values = values),
+///   min: 0.0,
+///   max: 100.0,
+///   divisions: 10,
+///   labels: RangeLabels('${_values.start}', '${_values.end}'),
+///   blur: 10.0,
+///   opacity: 0.2,
+/// )
+/// ```
 class GlassRangeSlider extends StatelessWidget {
+  /// The currently selected values for the start and end thumbs.
   final RangeValues values;
+
+  /// Called when the user is selecting a new value for the slider by dragging.
   final ValueChanged<RangeValues>? onChanged;
+
+  /// Called when the user starts dragging the slider.
   final ValueChanged<RangeValues>? onChangeStart;
+
+  /// Called when the user is done selecting a new value for the slider by dragging.
   final ValueChanged<RangeValues>? onChangeEnd;
+
+  /// The minimum value the user can select.
   final double min;
+
+  /// The maximum value the user can select.
   final double max;
+
+  /// The number of discrete divisions.
   final int? divisions;
+
+  /// The labels to show above the slider thumbs when the user is dragging them.
   final RangeLabels? labels;
+
+  /// The color of the active portion of the track.
   final Color? activeColor;
+
+  /// The color of the inactive portion of the track.
   final Color? inactiveColor;
+
+  /// The color of the thumb.
   final Color? thumbColor;
+
+  /// The cursor for a mouse pointer when it enters or is hovering over the slider.
   final MaterialStateMouseCursor? mouseCursor;
+
+  /// The intensity of the blur effect.
   final double blur;
+
+  /// The opacity of the glass effect.
   final double opacity;
+
+  /// Optional gradient to be applied over the blur effect.
   final Gradient? gradient;
+
+  /// The height of the track.
   final double trackHeight;
+
+  /// The border radius of the slider track and thumbs.
   final BorderRadius? borderRadius;
 
-  GlassRangeSlider({
+  /// Creates a glass range slider.
+  ///
+  /// The [values] parameter must not be null and its values must be between
+  /// [min] and [max], inclusive.
+  /// The [min] parameter must be less than or equal to [max].
+  /// The [divisions] parameter must be null or greater than 0.
+  const GlassRangeSlider({
     Key? key,
     required this.values,
     required this.onChanged,

@@ -48,10 +48,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: GlassNavigationDrawer(
+      drawer: const GlassNavigationDrawer(
         blur: 10,
         opacity: 0.2,
-        gradient: const LinearGradient(
+        gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             Color(0x1AFFFFFF), // Colors.white.withAlpha(26)
           ],
         ),
-        children: const [DrawerContent()],
+        children: [DrawerContent()],
       ),
       body: Container(
         decoration: const BoxDecoration(
