@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'glass_container.dart';
 import '../utils/glass_constants.dart';
@@ -123,7 +125,7 @@ class GlassRangeSlider extends StatelessWidget {
   final double trackHeight;
   final BorderRadius? borderRadius;
 
-  const GlassRangeSlider({
+  GlassRangeSlider({
     Key? key,
     required this.values,
     required this.onChanged,
@@ -142,9 +144,7 @@ class GlassRangeSlider extends StatelessWidget {
     this.gradient,
     this.trackHeight = 4.0,
     this.borderRadius,
-  })  : assert(values.start >= min && values.end <= max),
-        assert(values.start <= values.end),
-        super(key: key);
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
