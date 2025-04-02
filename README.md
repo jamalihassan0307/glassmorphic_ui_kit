@@ -54,7 +54,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  glassmorphic_ui_kit: ^1.0.4
+  glassmorphic_ui_kit: ^1.0.5
 ```
 
 ## Usage 💻
