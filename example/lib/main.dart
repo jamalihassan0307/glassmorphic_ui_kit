@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glassmorphic_ui_kit/glassmorphic_ui_kit.dart';
 import 'screens/navigation/navigation_bar_screen.dart';
 import 'screens/navigation/navigation_drawer_screen.dart';
 import 'screens/navigation/navigation_rail_screen.dart';
@@ -53,9 +54,57 @@ class MainScreen extends StatelessWidget {
             ],
           ),
         ),
-        child: const SafeArea(
+        child: SafeArea(
           child: Center(
-            child: Text('Open Drawer and navigate to other screens'),
+            child: GlassContainer(
+              width: 300,
+              height: 200,
+              blur: 20,
+              opacity: 0.2,
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Colors.white.withOpacity(0.2),
+                  Colors.white.withOpacity(0.1),
+                ],
+              ),
+              borderRadius: BorderRadius.circular(16),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(
+                    Icons.menu,
+                    color: Colors.white,
+                    size: 48,
+                  ),
+                  const SizedBox(height: 16),
+                  const Text(
+                    'Welcome to',
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 16,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'Glassmorphic UI Kit',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  GlassButton(
+                    onPressed: () {
+                      Scaffold.of(context).openDrawer();
+                    },
+                    child: const Text('Open Menu'),
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ),
