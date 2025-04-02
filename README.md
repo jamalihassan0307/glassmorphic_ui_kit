@@ -26,6 +26,9 @@ A Flutter package designed to implement modern glassmorphic UI trends with smoot
 - `GlassCard`: Frosted-glass card for UI elements
 - `GlassDialog`: Customizable glass dialog
 - `GlassBottomSheet`: Blurred bottom sheet with opacity control
+- `GlassBottomNavigationBar`: Navigation bar with glass effect
+- `GlassDrawer`: Drawer with glass effect and custom tiles
+- `GlassProgressIndicator`: Progress bar with glass effect
 
 ### 2. Customizable Blur & Transparency
 - Adjustable blur intensity
@@ -54,7 +57,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  glassmorphic_ui_kit: ^1.0.5
+  glassmorphic_ui_kit: ^1.0.6
 ```
 
 ## Usage 💻
@@ -88,37 +91,56 @@ GlassButton(
 )
 ```
 
-### Glass Card
+### Glass Bottom Navigation Bar
 
 ```dart
-GlassCard(
-  width: 300,
-  height: 200,
-  blur: 20,
-  child: Padding(
-    padding: EdgeInsets.all(16),
-    child: Column(
-      children: [
-        Text("Glass Card Title"),
-        Text("Content goes here"),
-      ],
+GlassBottomNavigationBar(
+  currentIndex: _currentIndex,
+  onTap: (index) => setState(() => _currentIndex = index),
+  items: const [
+    GlassBottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: 'Home',
     ),
+    GlassBottomNavigationBarItem(
+      icon: Icon(Icons.search),
+      label: 'Search',
+    ),
+  ],
+)
+```
+
+### Glass Drawer
+
+```dart
+GlassDrawer(
+  blur: 10,
+  opacity: 0.2,
+  child: Column(
+    children: [
+      GlassDrawerTile(
+        leading: Icon(Icons.home),
+        title: Text('Home'),
+        onTap: () {},
+      ),
+      GlassDrawerTile(
+        leading: Icon(Icons.settings),
+        title: Text('Settings'),
+        onTap: () {},
+      ),
+    ],
   ),
 )
 ```
 
-### Glass Dialog
+### Glass Progress Indicator
 
 ```dart
-GlassDialog(
-  title: Text("Glass Dialog"),
-  content: Text("This is a glassmorphic dialog!"),
-  actions: [
-    GlassButton(
-      onPressed: () => Navigator.pop(context),
-      child: Text("Close"),
-    ),
-  ],
+GlassProgressIndicator(
+  value: 0.7, // 70% progress
+  height: 8.0,
+  blur: 10,
+  borderRadius: BorderRadius.circular(4),
 )
 ```
 
