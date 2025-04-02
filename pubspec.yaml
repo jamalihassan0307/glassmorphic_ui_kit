@@ -13,8 +13,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_blur: 
   vector_math: ^2.1.4
-  glassmorphic_ui_kit:
-    path: ../
+  
 
 dev_dependencies:
   flutter_test:
