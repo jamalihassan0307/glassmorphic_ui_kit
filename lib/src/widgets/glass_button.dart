@@ -34,14 +34,15 @@ class GlassButton extends StatelessWidget {
           borderRadius: borderRadius ?? BorderRadius.circular(15),
           gradient: gradient,
           child: Padding(
-            padding: padding ?? const EdgeInsets.symmetric(
-              horizontal: 20,
-              vertical: 10,
-            ),
+            padding: padding ??
+                const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 10,
+                ),
             child: child,
           ),
         ),
       ),
     );
   }
-} 
+}

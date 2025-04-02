@@ -280,12 +280,12 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                           horizontal: 32,
                           vertical: 16,
                         ),
-                        child: const Row(
+                        child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.dialog, color: Colors.white),
-                            SizedBox(width: 8),
-                            Text(
+                            const Icon(Icons.info_outline, color: Colors.white),
+                            const SizedBox(width: 8),
+                            const Text(
                               "Show Glass Dialog",
                               style: TextStyle(
                                 color: Colors.white,
@@ -335,4 +335,4 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       ),
     );
   }
-} 
+}

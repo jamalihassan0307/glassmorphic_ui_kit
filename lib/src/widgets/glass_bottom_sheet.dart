@@ -24,9 +24,10 @@ class GlassBottomSheet extends StatelessWidget {
     return GlassContainer(
       height: height,
       blur: blur,
-      borderRadius: borderRadius ?? const BorderRadius.vertical(
-        top: Radius.circular(20),
-      ),
+      borderRadius: borderRadius ??
+          const BorderRadius.vertical(
+            top: Radius.circular(20),
+          ),
       gradient: gradient,
       child: Padding(
         padding: padding ?? const EdgeInsets.all(16.0),
@@ -71,4 +72,4 @@ class GlassBottomSheet extends StatelessWidget {
       ),
     );
   }
-} 
+}
