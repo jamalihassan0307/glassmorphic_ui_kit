@@ -82,25 +82,25 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       bottomNavigationBar: GlassNavigationBar(
         selectedIndex: _currentIndex,
         onDestinationSelected: (index) => setState(() => _currentIndex = index),
-        destinations: [
+        destinations: const [
           GlassNavigationDestination(
-            icon: const Icon(Icons.home, color: Colors.white70),
-            selectedIcon: const Icon(Icons.home, color: Colors.white),
+            icon: Icon(Icons.home, color: Colors.white70),
+            selectedIcon: Icon(Icons.home, color: Colors.white),
             label: 'Home',
           ),
           GlassNavigationDestination(
-            icon: const Icon(Icons.search, color: Colors.white70),
-            selectedIcon: const Icon(Icons.search, color: Colors.white),
+            icon: Icon(Icons.search, color: Colors.white70),
+            selectedIcon: Icon(Icons.search, color: Colors.white),
             label: 'Search',
           ),
           GlassNavigationDestination(
-            icon: const Icon(Icons.person, color: Colors.white70),
-            selectedIcon: const Icon(Icons.person, color: Colors.white),
+            icon: Icon(Icons.person, color: Colors.white70),
+            selectedIcon: Icon(Icons.person, color: Colors.white),
             label: 'Profile',
           ),
           GlassNavigationDestination(
-            icon: const Icon(Icons.settings, color: Colors.white70),
-            selectedIcon: const Icon(Icons.settings, color: Colors.white),
+            icon: Icon(Icons.settings, color: Colors.white70),
+            selectedIcon: Icon(Icons.settings, color: Colors.white),
             label: 'Settings',
           ),
         ],
