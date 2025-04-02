@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'glass_container.dart';
 import '../utils/glass_constants.dart';
+import 'package:flutter/gestures.dart';
 
 /// A slider with a glassmorphic effect.
 class GlassSlider extends StatelessWidget {
@@ -41,7 +42,14 @@ class GlassSlider extends StatelessWidget {
     this.label,
     this.activeColor,
     this.inactiveColor,
+    this.activeTrackColor,
+    this.inactiveTrackColor,
+    this.activeThumbImage,
+    this.inactiveThumbImage,
     this.thumbColor,
+    this.trackColor,
+    this.thumbIcon,
+    this.dragStartBehavior = DragStartBehavior.start,
     this.mouseCursor,
     this.blur = GlassConstants.defaultBlur,
     this.opacity = GlassConstants.defaultOpacity,
@@ -88,7 +96,7 @@ class GlassSlider extends StatelessWidget {
           onChanged: enabled ? onChanged : null,
           onChangeStart: enabled ? onChangeStart : null,
           onChangeEnd: enabled ? onChangeEnd : null,
-          mouseCursor: mouseCursor,
+          mouseCursor: MaterialStateProperty.all(mouseCursor),
         ),
       ),
     );
@@ -108,7 +116,7 @@ class GlassRangeSlider extends StatelessWidget {
   final Color? activeColor;
   final Color? inactiveColor;
   final Color? thumbColor;
-  final MouseCursor? mouseCursor;
+  final MaterialStateProperty<MouseCursor?>? mouseCursor;
   final double blur;
   final double opacity;
   final Gradient? gradient;
