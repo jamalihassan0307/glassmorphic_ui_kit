@@ -23,7 +23,7 @@ class GlassSlider extends StatelessWidget {
   final Color? trackColor;
   final IconData? thumbIcon;
   final DragStartBehavior dragStartBehavior;
-  final MaterialStateProperty<MouseCursor?>? mouseCursor;
+  final MouseCursor? mouseCursor;
   final double blur;
   final double opacity;
   final Gradient? gradient;
@@ -96,7 +96,7 @@ class GlassSlider extends StatelessWidget {
           onChanged: enabled ? onChanged : null,
           onChangeStart: enabled ? onChangeStart : null,
           onChangeEnd: enabled ? onChangeEnd : null,
-          mouseCursor: MaterialStateProperty.all(mouseCursor),
+          mouseCursor: mouseCursor,
         ),
       ),
     );
@@ -116,7 +116,7 @@ class GlassRangeSlider extends StatelessWidget {
   final Color? activeColor;
   final Color? inactiveColor;
   final Color? thumbColor;
-  final MaterialStateProperty<MouseCursor?>? mouseCursor;
+  final MouseCursor? mouseCursor;
   final double blur;
   final double opacity;
   final Gradient? gradient;
