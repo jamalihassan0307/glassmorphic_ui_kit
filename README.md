@@ -22,27 +22,34 @@ A Flutter package designed to implement modern glassmorphic UI trends with smoot
 ## Features 🛠️
 
 ### 1. Prebuilt Glass Widgets
+- `GlassContainer`: Base component for glass effects
 - `GlassButton`: Blurred button with ripple effect
 - `GlassCard`: Frosted-glass card for UI elements
 - `GlassDialog`: Customizable glass dialog
 - `GlassBottomSheet`: Blurred bottom sheet with opacity control
-- `GlassBottomNavigationBar`: Navigation bar with glass effect
-- `GlassDrawer`: Drawer with glass effect and custom tiles
+- `GlassNavigationBar`: Modern navigation bar with glass effect
+- `GlassNavigationDrawer`: Drawer with glass effect and custom tiles
 - `GlassProgressIndicator`: Progress bar with glass effect
+- `GlassSlider`: Customizable slider with glass effect
+- `GlassTextField`: Text input with glass effect
 
 ### 2. Customizable Blur & Transparency
 - Adjustable blur intensity
 - Dynamic opacity control
 - Customizable border radius
+- Improved MouseCursor handling
 
 ### 3. Gradient Overlays
 - Linear gradient support
 - Radial gradient support
 - Dynamic gradient animations
+- Custom gradient patterns
 
 ### 4. Performance Optimized
 - Efficient rendering
 - Smooth animations
+- Reduced widget rebuild cycles
+- Better state management
 - Flutter's Skia engine optimized
 
 ### 5. Cross-Platform Support
@@ -57,7 +64,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  glassmorphic_ui_kit: ^1.0.6
+  glassmorphic_ui_kit: ^1.1.0
 ```
 
 ## Usage 💻
