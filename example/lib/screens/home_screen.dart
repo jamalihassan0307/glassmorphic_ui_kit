@@ -51,24 +51,24 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       drawer: GlassNavigationDrawer(
         blur: 10,
         opacity: 0.2,
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: const [
-            Colors.white.withAlpha(51),
-            Colors.white.withAlpha(26),
+          colors: [
+            Color(0x33FFFFFF), // Colors.white.withAlpha(51)
+            Color(0x1AFFFFFF), // Colors.white.withAlpha(26)
           ],
         ),
         children: [DrawerContent()],
       ),
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: const [
-              Colors.blue.shade600,
-              Colors.purple.shade600,
+            colors: [
+              Color(0xFF1E88E5), // Colors.blue.shade600
+              Color(0xFF8E24AA), // Colors.purple.shade600
             ],
           ),
         ),
