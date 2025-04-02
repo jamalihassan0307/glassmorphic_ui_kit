@@ -1,3 +1,11 @@
+## 1.0.4
+
+* Replaced deprecated withOpacity with withAlpha for better precision
+* Updated documentation with proper alpha value examples
+* Improved code quality and static analysis compliance
+* Fixed gradient color handling in dark mode
+* Enhanced performance with optimized color operations
+
 ## 1.0.3
 
 * Enhanced example app with comprehensive showcase
