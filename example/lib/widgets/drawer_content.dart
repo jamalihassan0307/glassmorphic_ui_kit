@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:glassmorphic_ui_kit/glassmorphic_ui_kit.dart';
 
 class DrawerContent extends StatelessWidget {
   const DrawerContent({Key? key}) : super(key: key);
