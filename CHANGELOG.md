@@ -1,3 +1,11 @@
+## 1.0.5
+
+* Improved code formatting across all files
+* Enhanced static analysis compliance
+* Optimized example app performance
+* Updated documentation with latest best practices
+* Fixed minor code style inconsistencies
+
 ## 1.0.4
 
 * Replaced deprecated withOpacity with withAlpha for better precision
