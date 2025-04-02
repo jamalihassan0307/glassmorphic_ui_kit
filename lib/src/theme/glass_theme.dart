@@ -20,12 +20,13 @@ class GlassTheme {
   /// Returns a [LinearGradient] with appropriate opacity values.
   static LinearGradient defaultGradient(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final baseColor = isDark ? Colors.white : Colors.white;
     return LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
       colors: [
-        (isDark ? Colors.white : Colors.white).withOpacity(0.2),
-        (isDark ? Colors.white : Colors.white).withOpacity(0.1),
+        baseColor.withAlpha(51),  // 0.2 opacity = 51 in alpha (255 * 0.2)
+        baseColor.withAlpha(26),  // 0.1 opacity = 26 in alpha (255 * 0.1)
       ],
     );
   }
