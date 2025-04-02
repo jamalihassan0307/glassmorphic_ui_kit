@@ -87,4 +87,116 @@ void main() {
       expect(cardSize.height, 200);
     });
   });
+
+  group('GlassBottomNavigationBar Tests', () {
+    testWidgets('GlassBottomNavigationBar renders items correctly',
+        (WidgetTester tester) async {
+      int selectedIndex = 0;
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: GlassBottomNavigationBar(
+              currentIndex: selectedIndex,
+              onTap: (index) => selectedIndex = index,
+              items: const [
+                GlassBottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: 'Home',
+                ),
+                GlassBottomNavigationBarItem(
+                  icon: Icon(Icons.search),
+                  label: 'Search',
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+
+      expect(find.byType(GlassBottomNavigationBar), findsOneWidget);
+      expect(find.text('Home'), findsOneWidget);
+      expect(find.text('Search'), findsOneWidget);
+      expect(find.byIcon(Icons.home), findsOneWidget);
+      expect(find.byIcon(Icons.search), findsOneWidget);
+    });
+
+    testWidgets('GlassBottomNavigationBar handles tap',
+        (WidgetTester tester) async {
+      int selectedIndex = 0;
+      await tester.pumpWidget(
+        MaterialApp(
+          home: StatefulBuilder(
+            builder: (context, setState) {
+              return Scaffold(
+                body: GlassBottomNavigationBar(
+                  currentIndex: selectedIndex,
+                  onTap: (index) => setState(() => selectedIndex = index),
+                  items: const [
+                    GlassBottomNavigationBarItem(
+                      icon: Icon(Icons.home),
+                      label: 'Home',
+                    ),
+                    GlassBottomNavigationBarItem(
+                      icon: Icon(Icons.search),
+                      label: 'Search',
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
+        ),
+      );
+
+      await tester.tap(find.text('Search'));
+      await tester.pump();
+      expect(selectedIndex, 1);
+    });
+  });
+
+  group('GlassDrawer Tests', () {
+    testWidgets('GlassDrawer renders with header and child',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: GlassDrawer(
+              header: const Text('Header'),
+              child: const Text('Content'),
+            ),
+          ),
+        ),
+      );
+
+      expect(find.byType(GlassDrawer), findsOneWidget);
+      expect(find.text('Header'), findsOneWidget);
+      expect(find.text('Content'), findsOneWidget);
+    });
+
+    testWidgets('GlassDrawerTile handles tap and selection',
+        (WidgetTester tester) async {
+      bool tapped = false;
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: GlassDrawerTile(
+              leading: const Icon(Icons.home),
+              title: const Text('Home'),
+              subtitle: const Text('Go to home'),
+              selected: true,
+              onTap: () => tapped = true,
+            ),
+          ),
+        ),
+      );
+
+      expect(find.byType(GlassDrawerTile), findsOneWidget);
+      expect(find.text('Home'), findsOneWidget);
+      expect(find.text('Go to home'), findsOneWidget);
+      expect(find.byIcon(Icons.home), findsOneWidget);
+
+      await tester.tap(find.byType(GlassDrawerTile));
+      expect(tapped, true);
+    });
+  });
 }
