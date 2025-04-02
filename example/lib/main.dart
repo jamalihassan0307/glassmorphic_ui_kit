@@ -3,6 +3,7 @@ import 'screens/navigation/navigation_bar_screen.dart';
 import 'screens/navigation/navigation_drawer_screen.dart';
 import 'screens/navigation/navigation_rail_screen.dart';
 import 'screens/navigation/tab_bar_screen.dart';
+import 'screens/components/components_screen.dart';
 import 'widgets/navigation/app_drawer.dart';
 import 'widgets/navigation/app_navigation_bar.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         '/navigation/drawer': (context) => const NavigationDrawerScreen(),
         '/navigation/rail': (context) => const NavigationRailScreen(),
         '/navigation/tabs': (context) => const TabBarScreen(),
-        // Add more routes here as we create more screens
+        '/components': (context) => const ComponentsScreen(),
       },
     );
   }
@@ -79,16 +80,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget _buildContent() {
     switch (_selectedIndex) {
       case 0:
-        return const Center(
-          child: Text(
-            'Components Gallery',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        );
+        return const ComponentsScreen();
       case 1:
         return const Center(
           child: Text(
