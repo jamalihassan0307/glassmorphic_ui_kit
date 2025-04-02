@@ -1,3 +1,22 @@
+## 1.1.0
+
+* Major code organization improvements:
+  - Restructured example app with proper folder organization
+  - Separated widgets into dedicated files for better maintainability
+  - Added new utility classes for dialogs and animations
+* Enhanced existing components:
+  - Improved GlassNavigationBar with better icon handling
+  - Updated GlassNavigationDrawer with proper children parameter
+  - Fixed MouseCursor handling in GlassSlider
+* Added comprehensive documentation:
+  - Updated widget examples with proper parameter usage
+  - Added code snippets for common use cases
+  - Improved inline documentation for all widgets
+* Performance optimizations:
+  - Reduced widget rebuild cycles
+  - Improved animation performance
+  - Better state management in example app
+
 ## 1.0.6
 
 * Added new glass effect widgets:
