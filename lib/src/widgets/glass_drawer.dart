@@ -29,8 +29,9 @@ class GlassDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double effectiveWidth = width ?? MediaQuery.of(context).size.width * 0.85;
-    
+    final double effectiveWidth =
+        width ?? MediaQuery.of(context).size.width * 0.85;
+
     return Drawer(
       width: effectiveWidth,
       backgroundColor: Colors.transparent,
@@ -39,11 +40,11 @@ class GlassDrawer extends StatelessWidget {
         blur: blur,
         opacity: opacity,
         gradient: gradient,
-        borderRadius: borderRadius ?? const BorderRadius.horizontal(right: Radius.circular(16)),
+        borderRadius: borderRadius ??
+            const BorderRadius.horizontal(right: Radius.circular(16)),
         child: Column(
           children: [
-            if (header != null)
-              header!,
+            if (header != null) header!,
             if (child != null)
               Expanded(
                 child: Padding(
@@ -84,7 +85,8 @@ class GlassDrawerTile extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        padding: padding ?? const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        padding:
+            padding ?? const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         child: Row(
           children: [
             if (leading != null)
@@ -106,19 +108,22 @@ class GlassDrawerTile extends StatelessWidget {
                   if (title != null)
                     DefaultTextStyle(
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        color: selected ? Colors.white : Colors.white70,
-                      ) ?? TextStyle(
-                        color: selected ? Colors.white : Colors.white70,
-                      ),
+                                color: selected ? Colors.white : Colors.white70,
+                              ) ??
+                          TextStyle(
+                            color: selected ? Colors.white : Colors.white70,
+                          ),
                       child: title!,
                     ),
                   if (subtitle != null)
                     DefaultTextStyle(
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: selected ? Colors.white70 : Colors.white54,
-                      ) ?? TextStyle(
-                        color: selected ? Colors.white70 : Colors.white54,
-                      ),
+                                color:
+                                    selected ? Colors.white70 : Colors.white54,
+                              ) ??
+                          TextStyle(
+                            color: selected ? Colors.white70 : Colors.white54,
+                          ),
                       child: subtitle!,
                     ),
                 ],
@@ -140,4 +145,4 @@ class GlassDrawerTile extends StatelessWidget {
       ),
     );
   }
-} 
+}

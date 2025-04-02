@@ -31,7 +31,8 @@ class GlassButton extends StatefulWidget {
   State<GlassButton> createState() => _GlassButtonState();
 }
 
-class _GlassButtonState extends State<GlassButton> with SingleTickerProviderStateMixin {
+class _GlassButtonState extends State<GlassButton>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   bool _isPressed = false;
 
@@ -75,11 +76,13 @@ class _GlassButtonState extends State<GlassButton> with SingleTickerProviderStat
 
   @override
   Widget build(BuildContext context) {
-    final effectiveOpacity = widget.enabled ? widget.opacity : widget.opacity * 0.6;
-    final effectivePadding = widget.padding ?? const EdgeInsets.symmetric(
-      horizontal: 24,
-      vertical: 12,
-    );
+    final effectiveOpacity =
+        widget.enabled ? widget.opacity : widget.opacity * 0.6;
+    final effectivePadding = widget.padding ??
+        const EdgeInsets.symmetric(
+          horizontal: 24,
+          vertical: 12,
+        );
 
     return GestureDetector(
       onTapDown: _handleTapDown,
@@ -99,8 +102,10 @@ class _GlassButtonState extends State<GlassButton> with SingleTickerProviderStat
                 gradient: widget.gradient,
                 child: DefaultTextStyle(
                   style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                    color: widget.enabled ? Colors.white : Colors.white60,
-                  ) ?? const TextStyle(color: Colors.white),
+                            color:
+                                widget.enabled ? Colors.white : Colors.white60,
+                          ) ??
+                      const TextStyle(color: Colors.white),
                   child: widget.child,
                 ),
               ),

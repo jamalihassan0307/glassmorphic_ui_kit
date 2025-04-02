@@ -43,11 +43,11 @@ class GlassProgressIndicator extends StatelessWidget {
               LinearGradient(
                 colors: [
                   Colors.white.withAlpha(102), // 0.4 opacity
-                  Colors.white.withAlpha(51),  // 0.2 opacity
+                  Colors.white.withAlpha(51), // 0.2 opacity
                 ],
               ),
         ),
       ),
     );
   }
-} 
+}

@@ -36,7 +36,8 @@ class GlassBottomNavigationBar extends StatelessWidget {
       blur: blur,
       opacity: opacity,
       gradient: gradient,
-      borderRadius: borderRadius ?? const BorderRadius.vertical(top: Radius.circular(16)),
+      borderRadius:
+          borderRadius ?? const BorderRadius.vertical(top: Radius.circular(16)),
       child: SafeArea(
         child: Padding(
           padding: padding ?? const EdgeInsets.symmetric(horizontal: 8),
@@ -45,7 +46,7 @@ class GlassBottomNavigationBar extends StatelessWidget {
             children: List.generate(items.length, (index) {
               final item = items[index];
               final isSelected = index == currentIndex;
-              
+
               return Expanded(
                 child: InkWell(
                   onTap: onTap != null ? () => onTap!(index) : null,
@@ -63,12 +64,20 @@ class GlassBottomNavigationBar extends StatelessWidget {
                         ),
                         if (item.label != null)
                           DefaultTextStyle(
-                            style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                              color: isSelected ? Colors.white : Colors.white60,
-                            ) ?? TextStyle(
-                              color: isSelected ? Colors.white : Colors.white60,
-                              fontSize: 12,
-                            ),
+                            style: Theme.of(context)
+                                    .textTheme
+                                    .labelSmall
+                                    ?.copyWith(
+                                      color: isSelected
+                                          ? Colors.white
+                                          : Colors.white60,
+                                    ) ??
+                                TextStyle(
+                                  color: isSelected
+                                      ? Colors.white
+                                      : Colors.white60,
+                                  fontSize: 12,
+                                ),
                             child: Text(item.label!),
                           ),
                       ],
@@ -93,4 +102,4 @@ class GlassBottomNavigationBarItem {
     required this.icon,
     this.label,
   });
-} 
+}

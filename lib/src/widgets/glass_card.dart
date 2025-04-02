@@ -34,7 +34,7 @@ class GlassCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final effectivePadding = padding ?? const EdgeInsets.all(16);
-    
+
     Widget card = GlassContainer(
       width: width,
       height: height,
