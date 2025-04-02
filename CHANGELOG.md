@@ -1,3 +1,22 @@
+## 1.1.2
+
+* Enhanced example app navigation:
+  - Improved drawer implementation with proper context handling
+  - Fixed Scaffold context issues in main screen
+  - Added proper navigation state management
+* UI/UX improvements:
+  - Enhanced GlassNavigationRail with proper elevation handling
+  - Fixed overflow issues in navigation components
+  - Improved layout constraints for better responsiveness
+* Bug fixes:
+  - Resolved Scaffold.of() context issues
+  - Fixed GlassContainer overflow in navigation screens
+  - Improved widget tree structure for better performance
+* Documentation updates:
+  - Added new usage examples for navigation components
+  - Updated installation instructions with latest version
+  - Enhanced code documentation for better clarity
+
 ## 1.1.1
 
 * Fixed linter issues:
