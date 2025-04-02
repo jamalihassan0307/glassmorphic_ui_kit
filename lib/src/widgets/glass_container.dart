@@ -19,8 +19,8 @@ import '../utils/glass_constants.dart';
 ///   borderRadius: BorderRadius.circular(15),
 ///   gradient: LinearGradient(
 ///     colors: [
-///       Colors.white.withOpacity(0.2),
-///       Colors.white.withOpacity(0.1),
+///       Colors.white.withAlpha(51),  // 0.2 opacity
+///       Colors.white.withAlpha(26),  // 0.1 opacity
 ///     ],
 ///   ),
 ///   child: Center(child: Text("Glassmorphic Container")),
@@ -84,7 +84,7 @@ class GlassContainer extends StatelessWidget {
           width: width,
           height: height,
           decoration: BoxDecoration(
-            color: color ?? Colors.white.withOpacity(opacity),
+            color: color ?? Colors.white.withAlpha((opacity * 255).round()),
             borderRadius: borderRadius,
             gradient: gradient,
             border: border,
