@@ -2,7 +2,7 @@
 
 <div align="center">
   <kbd>
-    <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/plus/main/image/image.jpg" width="250" alt="Glassmorphic UI Kit"/>
+    <img src="https://github.com/jamalihassan0307/glassmorphic_ui_kit/blob/main/image/image.jpg?raw=true" width="250" alt="Jam Ali Hassan"/>
   </kbd>
   
   <h1>🌟 Glassmorphic UI Kit 🌟</h1>
