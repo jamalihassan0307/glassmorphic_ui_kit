@@ -1,3 +1,16 @@
+## 1.1.1
+
+* Fixed linter issues:
+  - Added const constructors where appropriate
+  - Improved code style compliance
+  - Enhanced static analysis conformity
+* Documentation improvements:
+  - Updated widget examples with proper const usage
+  - Enhanced inline documentation clarity
+* Performance optimizations:
+  - Better use of const constructors for improved widget rebuilds
+  - Optimized memory usage with proper const declarations
+
 ## 1.1.0
 
 * Major code organization improvements:
