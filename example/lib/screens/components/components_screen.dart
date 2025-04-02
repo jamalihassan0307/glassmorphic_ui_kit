@@ -180,7 +180,7 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                 ),
               ),
               const SizedBox(height: 16),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   GlassProgressIndicator(),
@@ -214,8 +214,8 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                 ),
               ),
               const SizedBox(height: 16),
-              GlassCard(
-                child: const Padding(
+              const GlassCard(
+                child: Padding(
                   padding: EdgeInsets.all(16),
                   child: Text(
                     'Glass Card Example',
