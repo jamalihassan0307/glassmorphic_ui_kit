@@ -113,134 +113,7 @@ dependencies:
   glassmorphic_ui_kit: ^1.1.2
 ```
 
-## Usage 💻
 
-### Basic Glass Container
-
-```dart
-GlassContainer(
-  width: 300,
-  height: 200,
-  blur: 20,
-  borderRadius: BorderRadius.circular(15),
-  gradient: LinearGradient(
-    colors: [
-      Colors.white.withAlpha(51),  // 0.2 opacity
-      Colors.white.withAlpha(26),  // 0.1 opacity
-    ],
-  ),
-  child: Center(child: Text("Glassmorphic Container")),
-)
-```
-
-### Glass Button
-
-```dart
-GlassButton(
-  onPressed: () => print('Button pressed'),
-  blur: 10,
-  borderRadius: BorderRadius.circular(15),
-  child: Text("Glass Button"),
-)
-```
-
-### Glass Bottom Navigation Bar
-
-```dart
-GlassBottomNavigationBar(
-  currentIndex: _currentIndex,
-  onTap: (index) => setState(() => _currentIndex = index),
-  items: const [
-    GlassBottomNavigationBarItem(
-      icon: Icon(Icons.home),
-      label: 'Home',
-    ),
-    GlassBottomNavigationBarItem(
-      icon: Icon(Icons.search),
-      label: 'Search',
-    ),
-  ],
-)
-```
-
-### Glass Drawer
-
-```dart
-GlassDrawer(
-  blur: 10,
-  opacity: 0.2,
-  child: Column(
-    children: [
-      GlassDrawerTile(
-        leading: Icon(Icons.home),
-        title: Text('Home'),
-        onTap: () {},
-      ),
-      GlassDrawerTile(
-        leading: Icon(Icons.settings),
-        title: Text('Settings'),
-        onTap: () {},
-      ),
-    ],
-  ),
-)
-```
-
-### Glass Progress Indicator
-
-```dart
-GlassProgressIndicator(
-  value: 0.7, // 70% progress
-  height: 8.0,
-  blur: 10,
-  borderRadius: BorderRadius.circular(4),
-)
-```
-
-### Glass Navigation Rail
-```dart
-GlassNavigationRail(
-  selectedIndex: _selectedIndex,
-  onDestinationSelected: (index) => setState(() => _selectedIndex = index),
-  elevation: 1, // New parameter for proper elevation
-  gradient: LinearGradient(
-    colors: [
-      Colors.purple.withAlpha(77),
-      Colors.blue.withAlpha(51),
-    ],
-  ),
-  leading: Column(
-    children: [
-      CircleAvatar(
-        radius: 20,
-        backgroundColor: Colors.white24,
-        child: Icon(Icons.person, color: Colors.white),
-      ),
-      SizedBox(height: 8),
-      Container(
-        width: 40,
-        height: 4,
-        decoration: BoxDecoration(
-          color: Colors.white24,
-          borderRadius: BorderRadius.circular(2),
-        ),
-      ),
-    ],
-  ),
-  destinations: const [
-    GlassNavigationRailDestination(
-      icon: Icon(Icons.dashboard_outlined, color: Colors.white70),
-      selectedIcon: Icon(Icons.dashboard, color: Colors.white),
-      label: Text('Dashboard'),
-    ),
-    GlassNavigationRailDestination(
-      icon: Icon(Icons.analytics_outlined, color: Colors.white70),
-      selectedIcon: Icon(Icons.analytics, color: Colors.white),
-      label: Text('Analytics'),
-    ),
-  ],
-)
-```
 
 ## Usage Examples 💻
 
@@ -625,6 +498,135 @@ AnimatedGlassContainer(
       style: TextStyle(color: Colors.white),
     ),
   ),
+)
+```
+
+## Usage 💻
+
+### Basic Glass Container
+
+```dart
+GlassContainer(
+  width: 300,
+  height: 200,
+  blur: 20,
+  borderRadius: BorderRadius.circular(15),
+  gradient: LinearGradient(
+    colors: [
+      Colors.white.withAlpha(51),  // 0.2 opacity
+      Colors.white.withAlpha(26),  // 0.1 opacity
+    ],
+  ),
+  child: Center(child: Text("Glassmorphic Container")),
+)
+```
+
+### Glass Button
+
+```dart
+GlassButton(
+  onPressed: () => print('Button pressed'),
+  blur: 10,
+  borderRadius: BorderRadius.circular(15),
+  child: Text("Glass Button"),
+)
+```
+
+### Glass Bottom Navigation Bar
+
+```dart
+GlassBottomNavigationBar(
+  currentIndex: _currentIndex,
+  onTap: (index) => setState(() => _currentIndex = index),
+  items: const [
+    GlassBottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: 'Home',
+    ),
+    GlassBottomNavigationBarItem(
+      icon: Icon(Icons.search),
+      label: 'Search',
+    ),
+  ],
+)
+```
+
+### Glass Drawer
+
+```dart
+GlassDrawer(
+  blur: 10,
+  opacity: 0.2,
+  child: Column(
+    children: [
+      GlassDrawerTile(
+        leading: Icon(Icons.home),
+        title: Text('Home'),
+        onTap: () {},
+      ),
+      GlassDrawerTile(
+        leading: Icon(Icons.settings),
+        title: Text('Settings'),
+        onTap: () {},
+      ),
+    ],
+  ),
+)
+```
+
+### Glass Progress Indicator
+
+```dart
+GlassProgressIndicator(
+  value: 0.7, // 70% progress
+  height: 8.0,
+  blur: 10,
+  borderRadius: BorderRadius.circular(4),
+)
+```
+
+### Glass Navigation Rail
+```dart
+GlassNavigationRail(
+  selectedIndex: _selectedIndex,
+  onDestinationSelected: (index) => setState(() => _selectedIndex = index),
+  elevation: 1, // New parameter for proper elevation
+  gradient: LinearGradient(
+    colors: [
+      Colors.purple.withAlpha(77),
+      Colors.blue.withAlpha(51),
+    ],
+  ),
+  leading: Column(
+    children: [
+      CircleAvatar(
+        radius: 20,
+        backgroundColor: Colors.white24,
+        child: Icon(Icons.person, color: Colors.white),
+      ),
+      SizedBox(height: 8),
+      Container(
+        width: 40,
+        height: 4,
+        decoration: BoxDecoration(
+          color: Colors.white24,
+          borderRadius: BorderRadius.circular(2),
+        ),
+      ),
+    ],
+  ),
+  destinations: const [
+    GlassNavigationRailDestination(
+      icon: Icon(Icons.dashboard_outlined, color: Colors.white70),
+      selectedIcon: Icon(Icons.dashboard, color: Colors.white),
+      label: Text('Dashboard'),
+    ),
+    GlassNavigationRailDestination(
+      icon: Icon(Icons.analytics_outlined, color: Colors.white70),
+      selectedIcon: Icon(Icons.analytics, color: Colors.white),
+      label: Text('Analytics'),
+    ),
+  ],
 )
 ```
 
