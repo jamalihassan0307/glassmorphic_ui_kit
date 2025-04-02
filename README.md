@@ -110,7 +110,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  glassmorphic_ui_kit: ^1.1.0
+  glassmorphic_ui_kit: ^1.1.2
 ```
 
 ## Usage 💻
@@ -194,6 +194,51 @@ GlassProgressIndicator(
   height: 8.0,
   blur: 10,
   borderRadius: BorderRadius.circular(4),
+)
+```
+
+### Glass Navigation Rail
+```dart
+GlassNavigationRail(
+  selectedIndex: _selectedIndex,
+  onDestinationSelected: (index) => setState(() => _selectedIndex = index),
+  elevation: 1, // New parameter for proper elevation
+  gradient: LinearGradient(
+    colors: [
+      Colors.purple.withAlpha(77),
+      Colors.blue.withAlpha(51),
+    ],
+  ),
+  leading: Column(
+    children: [
+      CircleAvatar(
+        radius: 20,
+        backgroundColor: Colors.white24,
+        child: Icon(Icons.person, color: Colors.white),
+      ),
+      SizedBox(height: 8),
+      Container(
+        width: 40,
+        height: 4,
+        decoration: BoxDecoration(
+          color: Colors.white24,
+          borderRadius: BorderRadius.circular(2),
+        ),
+      ),
+    ],
+  ),
+  destinations: const [
+    GlassNavigationRailDestination(
+      icon: Icon(Icons.dashboard_outlined, color: Colors.white70),
+      selectedIcon: Icon(Icons.dashboard, color: Colors.white),
+      label: Text('Dashboard'),
+    ),
+    GlassNavigationRailDestination(
+      icon: Icon(Icons.analytics_outlined, color: Colors.white70),
+      selectedIcon: Icon(Icons.analytics, color: Colors.white),
+      label: Text('Analytics'),
+    ),
+  ],
 )
 ```
 
@@ -541,3 +586,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you find this package helpful, please give it a ⭐️ on [GitHub](https://github.com/jamalihassan0307/glassmorphic_ui_kit)!
 
 For issues, feature requests, or questions, please file an issue on the GitHub repository.
+
+### Best Practices for Navigation Components
+1. Always wrap buttons that use `Scaffold.of(context)` with a `Builder` widget
+2. Use proper constraints to prevent overflow in navigation layouts
+3. Set appropriate elevation values for navigation components
+4. Handle state management properly in navigation screens
+5. Consider responsive design for different screen sizes
