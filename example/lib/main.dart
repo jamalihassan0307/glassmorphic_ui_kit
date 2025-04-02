@@ -96,11 +96,13 @@ class MainScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 16),
-                  GlassButton(
-                    onPressed: () {
-                      Scaffold.of(context).openDrawer();
-                    },
-                    child: const Text('Open Menu'),
+                  Builder(
+                    builder: (context) => GlassButton(
+                      onPressed: () {
+                        Scaffold.of(context).openDrawer();
+                      },
+                      child: const Text('Open Menu'),
+                    ),
                   ),
                 ],
               ),
