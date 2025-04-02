@@ -1,3 +1,19 @@
+## 1.1.3
+
+* Documentation improvements:
+  - Enhanced README with comprehensive widget examples
+  - Added visual examples with screenshots and GIFs
+  - Updated navigation components documentation
+  - Improved code examples with detailed explanations
+* UI Components showcase:
+  - Added screenshots for all navigation components
+  - Included interactive GIFs demonstrating widget functionality
+  - Enhanced visual documentation for better understanding
+* Repository organization:
+  - Added screenshots directory with organized assets
+  - Updated image paths for better maintainability
+  - Improved example app structure
+
 ## 1.1.2
 
 * Enhanced example app navigation:
