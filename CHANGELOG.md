@@ -1,3 +1,14 @@
+## 1.1.4
+
+* Documentation enhancements:
+  - Added comprehensive contact information
+  - Updated developer profile links
+  - Added portfolio and social media links
+* Repository improvements:
+  - Enhanced documentation structure
+  - Updated version references
+  - Improved maintainer information
+
 ## 1.1.3
 
 * Documentation improvements:
