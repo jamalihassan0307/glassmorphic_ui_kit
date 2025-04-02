@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 import 'glass_container.dart';
 import '../utils/glass_constants.dart';
 
@@ -19,7 +20,7 @@ class GlassTabBar extends StatelessWidget implements PreferredSizeWidget {
   final Color? unselectedLabelColor;
   final TextStyle? unselectedLabelStyle;
   final DragStartBehavior dragStartBehavior;
-  final MaterialStateProperty<MouseCursor?>? mouseCursor;
+  final MouseCursor? mouseCursor;
   final ScrollPhysics? physics;
   final InteractiveInkFeatureFactory? splashFactory;
   final BorderRadius? borderRadius;
