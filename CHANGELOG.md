@@ -1,3 +1,14 @@
+## 1.0.3
+
+* Enhanced example app with comprehensive showcase
+* Added animations to example components
+* Improved documentation with detailed usage examples
+* Added proper error handling for blur effects
+* Optimized performance for complex layouts
+* Added support for custom gradient patterns
+* Enhanced dark mode compatibility
+* Fixed minor UI inconsistencies
+
 ## 1.0.2
 
 * Added Roboto font assets
