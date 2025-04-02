@@ -12,3 +12,5 @@ export 'src/widgets/glass_bottom_sheet.dart';
 export 'src/widgets/glass_container.dart';
 export 'src/animations/glass_animations.dart';
 export 'src/theme/glass_theme.dart';
+export 'src/widgets/glass_bottom_navigation_bar.dart';
+export 'src/widgets/glass_drawer.dart';
