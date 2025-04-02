@@ -146,6 +146,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support ❤️
 
-If you find this package helpful, please give it a ⭐️ on [GitHub](https://github.com/yourusername/glassmorphic_ui_kit)!
+If you find this package helpful, please give it a ⭐️ on [GitHub](https://github.com/jamalihassan0307/glassmorphic_ui_kit)!
 
 For issues, feature requests, or questions, please file an issue on the GitHub repository.
