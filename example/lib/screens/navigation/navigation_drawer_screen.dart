@@ -71,8 +71,11 @@ class NavigationDrawerScreen extends StatelessWidget {
                     ),
                   );
                 },
-                child: const Text('Show Basic Drawer',
-                    style: TextStyle(color: Colors.white)),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text('Show Basic Drawer',
+                      style: TextStyle(color: Colors.white)),
+                ),
               ),
             ],
           ),
@@ -160,6 +163,7 @@ class NavigationDrawerScreen extends StatelessWidget {
             ],
           ),
         ),
+        const SizedBox(height: 32),
       ],
     );
   }
