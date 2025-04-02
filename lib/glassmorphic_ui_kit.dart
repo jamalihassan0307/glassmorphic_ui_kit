@@ -5,15 +5,24 @@
 /// featuring customizable blur effects, gradient overlays, and smooth animations.
 library glassmorphic_ui_kit;
 
+export 'src/widgets/glass_container.dart';
 export 'src/widgets/glass_button.dart';
 export 'src/widgets/glass_card.dart';
 export 'src/widgets/glass_dialog.dart';
 export 'src/widgets/glass_bottom_sheet.dart';
-export 'src/widgets/glass_container.dart';
-export 'src/animations/glass_animations.dart';
-export 'src/theme/glass_theme.dart';
-export 'src/widgets/glass_bottom_navigation_bar.dart';
-export 'src/widgets/glass_drawer.dart';
+export 'src/widgets/glass_list_tile.dart';
+export 'src/widgets/glass_menu_button.dart';
+export 'src/widgets/glass_navigation_bar.dart';
+export 'src/widgets/glass_navigation_drawer.dart';
+export 'src/widgets/glass_navigation_rail.dart';
+export 'src/widgets/glass_scaffold.dart';
+export 'src/widgets/glass_search_bar.dart';
+export 'src/widgets/glass_slider.dart';
+export 'src/widgets/glass_switch.dart';
+export 'src/widgets/glass_tab_bar.dart';
+export 'src/utils/glass_constants.dart';
+export 'src/utils/glass_theme.dart';
+export 'src/utils/glass_animation.dart';
 
 
 
