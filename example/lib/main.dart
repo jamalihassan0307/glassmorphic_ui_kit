@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Glassmorphic UI Kit Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: 'Roboto',
       ),
       home: const MyHomePage(),
     );
