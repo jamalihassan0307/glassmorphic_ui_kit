@@ -1,3 +1,11 @@
+## 1.1.5
+
+* AddShort & Impactful description :
+  - Added comprehensive contact information
+  - Updated developer profile links
+  - jamalihassan0307
+
+  
 ## 1.1.4
 
 * Documentation enhancements:
