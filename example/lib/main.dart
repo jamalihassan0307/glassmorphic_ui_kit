@@ -5,7 +5,6 @@ import 'screens/navigation/navigation_rail_screen.dart';
 import 'screens/navigation/tab_bar_screen.dart';
 import 'screens/components/components_screen.dart';
 import 'widgets/navigation/app_drawer.dart';
-import 'widgets/navigation/app_navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,27 +22,21 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Roboto',
       ),
-      home: const MainScreen(),
+      initialRoute: '/components',
       routes: {
+        '/': (context) => const MainScreen(),
+        '/components': (context) => const ComponentsScreen(),
         '/navigation/bar': (context) => const NavigationBarScreen(),
         '/navigation/drawer': (context) => const NavigationDrawerScreen(),
         '/navigation/rail': (context) => const NavigationRailScreen(),
         '/navigation/tabs': (context) => const TabBarScreen(),
-        '/components': (context) => const ComponentsScreen(),
       },
     );
   }
 }
 
-class MainScreen extends StatefulWidget {
+class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
-
-  @override
-  State<MainScreen> createState() => _MainScreenState();
-}
-
-class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -60,63 +53,10 @@ class _MainScreenState extends State<MainScreen> {
             ],
           ),
         ),
-        child: SafeArea(
-          child: Column(
-            children: [
-              Expanded(
-                child: _buildContent(),
-              ),
-              AppNavigationBar(
-                selectedIndex: _selectedIndex,
-                onDestinationSelected: (index) =>
-                    setState(() => _selectedIndex = index),
-              ),
-            ],
-          ),
+        child: const SafeArea(
+          child: ComponentsScreen(),
         ),
       ),
     );
-  }
-
-  Widget _buildContent() {
-    switch (_selectedIndex) {
-      case 0:
-        return const ComponentsScreen();
-      case 1:
-        return const Center(
-          child: Text(
-            'Themes',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        );
-      case 2:
-        return const Center(
-          child: Text(
-            'Code Examples',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        );
-      case 3:
-        return const Center(
-          child: Text(
-            'About',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        );
-      default:
-        return const SizedBox.shrink();
-    }
   }
 }
