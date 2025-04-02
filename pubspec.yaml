@@ -1,6 +1,6 @@
 name: glassmorphic_ui_kit
 description: A Flutter package for implementing modern glassmorphic UI trends with smooth blur effects, frosted glass appearance, and gradient overlays.
-version: 1.0.0
+version: 1.0.2
 homepage: https://github.com/yourusername/glassmorphic_ui_kit
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  flutter_blur: 
+  flutter_blur: ^0.0.2
   vector_math: ^2.1.4
 
 dev_dependencies:
@@ -36,11 +36,11 @@ flutter:
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
-  # To add custom fonts to your package, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
+  # Assets
+  assets:
+    - assets/fonts/
+
+  # Fonts
   fonts:
     - family: Roboto
       fonts:
