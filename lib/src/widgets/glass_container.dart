@@ -54,6 +54,9 @@ class GlassContainer extends StatelessWidget {
   /// The background color of the container. If null, white with [opacity] will be used.
   final Color? color;
 
+  /// The padding to apply to the container's child.
+  final EdgeInsetsGeometry? padding;
+
   /// Creates a glass container with customizable blur and gradient effects.
   ///
   /// The [blur] parameter controls the intensity of the frosted glass effect,
@@ -69,6 +72,7 @@ class GlassContainer extends StatelessWidget {
     this.gradient,
     this.border,
     this.color,
+    this.padding,
   }) : super(key: key);
 
   @override
@@ -83,6 +87,7 @@ class GlassContainer extends StatelessWidget {
         child: Container(
           width: width,
           height: height,
+          padding: padding,
           decoration: BoxDecoration(
             color: color ?? Colors.white.withAlpha((opacity * 255).round()),
             borderRadius: borderRadius,
