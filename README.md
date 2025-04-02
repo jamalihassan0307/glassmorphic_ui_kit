@@ -110,7 +110,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  glassmorphic_ui_kit: ^1.1.3
+  glassmorphic_ui_kit: ^1.1.4
 ```
 
 
@@ -694,3 +694,10 @@ For issues, feature requests, or questions, please file an issue on the GitHub r
 3. Set appropriate elevation values for navigation components
 4. Handle state management properly in navigation screens
 5. Consider responsive design for different screen sizes
+
+## Contact
+
+- 👨‍💻 Developed by [Jam Ali Hassan](https://github.com/jamalihassan0307)
+- 🌐 [Portfolio](https://jamalihassan0307.github.io/portfolio.github.io)
+- 📧 Email: jamalihassan0307@gmail.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/jamalihassan0307)
