@@ -125,11 +125,11 @@ void main() {
     testWidgets('GlassNavigationDrawer renders with header and children',
         (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GlassNavigationDrawer(
-              header: const Text('Header'),
-              children: const [Text('Content')],
+              header: Text('Header'),
+              children: [Text('Content')],
             ),
           ),
         ),
