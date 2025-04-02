@@ -35,7 +35,8 @@ class GlassNavigationDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double effectiveWidth = width ?? MediaQuery.of(context).size.width * 0.85;
+    final double effectiveWidth =
+        width ?? MediaQuery.of(context).size.width * 0.85;
 
     return NavigationDrawer(
       backgroundColor: Colors.transparent,
@@ -47,9 +48,10 @@ class GlassNavigationDrawer extends StatelessWidget {
           width: effectiveWidth,
           blur: blur,
           opacity: opacity,
-          borderRadius: borderRadius ?? const BorderRadius.horizontal(
-            right: Radius.circular(16),
-          ),
+          borderRadius: borderRadius ??
+              const BorderRadius.horizontal(
+                right: Radius.circular(16),
+              ),
           gradient: gradient,
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -103,10 +105,11 @@ class GlassNavigationDrawerItem extends StatelessWidget {
       child: InkWell(
         onTap: onPressed,
         child: Padding(
-          padding: padding ?? const EdgeInsets.symmetric(
-            horizontal: 16.0,
-            vertical: 12.0,
-          ),
+          padding: padding ??
+              const EdgeInsets.symmetric(
+                horizontal: 16.0,
+                vertical: 12.0,
+              ),
           child: Row(
             children: [
               if (icon != null) ...[
@@ -122,9 +125,9 @@ class GlassNavigationDrawerItem extends StatelessWidget {
               Expanded(
                 child: DefaultTextStyle(
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                    color: selected ? Colors.white : Colors.white70,
-                    fontWeight: selected ? FontWeight.bold : null,
-                  ),
+                        color: selected ? Colors.white : Colors.white70,
+                        fontWeight: selected ? FontWeight.bold : null,
+                      ),
                   child: label,
                 ),
               ),
@@ -134,4 +137,4 @@ class GlassNavigationDrawerItem extends StatelessWidget {
       ),
     );
   }
-} 
+}

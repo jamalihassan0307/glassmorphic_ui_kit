@@ -56,11 +56,12 @@ class GlassMenuButton<T> extends StatelessWidget {
         itemBuilder: (context) => items,
         child: Padding(
           padding: padding ?? const EdgeInsets.all(8.0),
-          child: child ?? Icon(
-            Icons.more_vert,
-            color: iconColor ?? (isDark ? Colors.white : Colors.black),
-            size: iconSize ?? 24.0,
-          ),
+          child: child ??
+              Icon(
+                Icons.more_vert,
+                color: iconColor ?? (isDark ? Colors.white : Colors.black),
+                size: iconSize ?? 24.0,
+              ),
         ),
       ),
     );
@@ -92,4 +93,4 @@ class GlassMenuItem<T> extends PopupMenuItem<T> {
             child: child,
           ),
         );
-} 
+}

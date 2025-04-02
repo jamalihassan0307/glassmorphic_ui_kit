@@ -187,4 +187,4 @@ class HomeContent extends StatelessWidget {
       ),
     );
   }
-} 
+}

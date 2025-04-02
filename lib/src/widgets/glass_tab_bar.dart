@@ -72,7 +72,8 @@ class GlassTabBar extends StatelessWidget implements PreferredSizeWidget {
         tabs: tabs,
         isScrollable: isScrollable,
         padding: padding,
-        indicatorColor: indicatorColor ?? (isDark ? Colors.white : Colors.black),
+        indicatorColor:
+            indicatorColor ?? (isDark ? Colors.white : Colors.black),
         indicatorWeight: indicatorWeight,
         indicatorPadding: indicatorPadding ?? EdgeInsets.zero,
         indicator: indicator,
@@ -80,8 +81,8 @@ class GlassTabBar extends StatelessWidget implements PreferredSizeWidget {
         labelColor: labelColor ?? (isDark ? Colors.white : Colors.black),
         labelStyle: labelStyle,
         labelPadding: labelPadding,
-        unselectedLabelColor: unselectedLabelColor ??
-            (isDark ? Colors.white60 : Colors.black54),
+        unselectedLabelColor:
+            unselectedLabelColor ?? (isDark ? Colors.white60 : Colors.black54),
         unselectedLabelStyle: unselectedLabelStyle,
         dragStartBehavior: dragStartBehavior,
         mouseCursor: mouseCursor,
@@ -131,4 +132,4 @@ class GlassTab extends StatelessWidget {
       ),
     );
   }
-} 
+}

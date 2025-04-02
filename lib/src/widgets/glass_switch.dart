@@ -67,10 +67,10 @@ class GlassSwitch extends StatelessWidget {
         onChanged: onChanged,
         activeColor: activeColor ?? defaultActiveColor,
         inactiveThumbColor: inactiveColor ?? defaultInactiveColor,
-        activeTrackColor: activeTrackColor ??
-            defaultActiveColor.withOpacity(0.5),
-        inactiveTrackColor: inactiveTrackColor ??
-            defaultInactiveColor.withOpacity(0.3),
+        activeTrackColor:
+            activeTrackColor ?? defaultActiveColor.withOpacity(0.5),
+        inactiveTrackColor:
+            inactiveTrackColor ?? defaultInactiveColor.withOpacity(0.3),
         activeThumbImage: activeThumbImage,
         inactiveThumbImage: inactiveThumbImage,
         thumbColor: thumbColor,
@@ -83,4 +83,4 @@ class GlassSwitch extends StatelessWidget {
       ),
     );
   }
-} 
+}

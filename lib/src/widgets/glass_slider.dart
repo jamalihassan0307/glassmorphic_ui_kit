@@ -76,15 +76,18 @@ class GlassSlider extends StatelessWidget {
         data: SliderThemeData(
           trackHeight: trackHeight,
           activeTrackColor: activeColor ??
-              (isDark ? Colors.white.withOpacity(0.8) : Colors.black.withOpacity(0.8)),
+              (isDark
+                  ? Colors.white.withOpacity(0.8)
+                  : Colors.black.withOpacity(0.8)),
           inactiveTrackColor: inactiveColor ??
-              (isDark ? Colors.white.withOpacity(0.3) : Colors.black.withOpacity(0.3)),
-          thumbColor: thumbColor ??
-              (isDark ? Colors.white : Colors.black),
+              (isDark
+                  ? Colors.white.withOpacity(0.3)
+                  : Colors.black.withOpacity(0.3)),
+          thumbColor: thumbColor ?? (isDark ? Colors.white : Colors.black),
           overlayColor: (thumbColor ?? (isDark ? Colors.white : Colors.black))
               .withOpacity(0.12),
-          valueIndicatorColor: thumbColor ??
-              (isDark ? Colors.white : Colors.black),
+          valueIndicatorColor:
+              thumbColor ?? (isDark ? Colors.white : Colors.black),
           valueIndicatorTextStyle: TextStyle(
             color: isDark ? Colors.black : Colors.white,
           ),
@@ -161,15 +164,18 @@ class GlassRangeSlider extends StatelessWidget {
         data: SliderThemeData(
           trackHeight: trackHeight,
           activeTrackColor: activeColor ??
-              (isDark ? Colors.white.withOpacity(0.8) : Colors.black.withOpacity(0.8)),
+              (isDark
+                  ? Colors.white.withOpacity(0.8)
+                  : Colors.black.withOpacity(0.8)),
           inactiveTrackColor: inactiveColor ??
-              (isDark ? Colors.white.withOpacity(0.3) : Colors.black.withOpacity(0.3)),
-          thumbColor: thumbColor ??
-              (isDark ? Colors.white : Colors.black),
+              (isDark
+                  ? Colors.white.withOpacity(0.3)
+                  : Colors.black.withOpacity(0.3)),
+          thumbColor: thumbColor ?? (isDark ? Colors.white : Colors.black),
           overlayColor: (thumbColor ?? (isDark ? Colors.white : Colors.black))
               .withOpacity(0.12),
-          valueIndicatorColor: thumbColor ??
-              (isDark ? Colors.white : Colors.black),
+          valueIndicatorColor:
+              thumbColor ?? (isDark ? Colors.white : Colors.black),
           valueIndicatorTextStyle: TextStyle(
             color: isDark ? Colors.black : Colors.white,
           ),
@@ -188,4 +194,4 @@ class GlassRangeSlider extends StatelessWidget {
       ),
     );
   }
-} 
+}

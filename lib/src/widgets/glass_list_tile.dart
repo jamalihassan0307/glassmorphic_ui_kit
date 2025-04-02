@@ -50,10 +50,11 @@ class GlassListTile extends StatelessWidget {
         onLongPress: enabled ? onLongPress : null,
         borderRadius: borderRadius ?? BorderRadius.circular(8),
         child: Padding(
-          padding: contentPadding ?? const EdgeInsets.symmetric(
-            horizontal: 16.0,
-            vertical: 12.0,
-          ),
+          padding: contentPadding ??
+              const EdgeInsets.symmetric(
+                horizontal: 16.0,
+                vertical: 12.0,
+              ),
           child: Row(
             children: [
               if (leading != null)
@@ -128,4 +129,4 @@ class GlassListTile extends StatelessWidget {
     if (!enabled) return isDark ? Colors.white24 : Colors.black26;
     return isDark ? Colors.white60 : Colors.black54;
   }
-} 
+}

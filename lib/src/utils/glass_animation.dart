@@ -79,4 +79,4 @@ extension GlassAnimationExtension on Widget {
       child: this,
     );
   }
-} 
+}

@@ -63,37 +63,41 @@ class GlassSearchBar extends StatelessWidget {
           autofocus: autofocus,
           enabled: enabled,
           style: textStyle?.copyWith(
-            color: enabled
-                ? (isDark ? Colors.white : Colors.black)
-                : (isDark ? Colors.white38 : Colors.black38),
-          ) ?? TextStyle(
-            color: enabled
-                ? (isDark ? Colors.white : Colors.black)
-                : (isDark ? Colors.white38 : Colors.black38),
-          ),
+                color: enabled
+                    ? (isDark ? Colors.white : Colors.black)
+                    : (isDark ? Colors.white38 : Colors.black38),
+              ) ??
+              TextStyle(
+                color: enabled
+                    ? (isDark ? Colors.white : Colors.black)
+                    : (isDark ? Colors.white38 : Colors.black38),
+              ),
           decoration: InputDecoration(
             hintText: hintText ?? 'Search',
             hintStyle: hintStyle?.copyWith(
-              color: enabled
-                  ? (isDark ? Colors.white70 : Colors.black54)
-                  : (isDark ? Colors.white38 : Colors.black38),
-            ) ?? TextStyle(
-              color: enabled
-                  ? (isDark ? Colors.white70 : Colors.black54)
-                  : (isDark ? Colors.white38 : Colors.black38),
-            ),
-            prefixIcon: prefixIcon ?? Icon(
-              Icons.search,
-              color: enabled
-                  ? (isDark ? Colors.white70 : Colors.black54)
-                  : (isDark ? Colors.white38 : Colors.black38),
-            ),
+                  color: enabled
+                      ? (isDark ? Colors.white70 : Colors.black54)
+                      : (isDark ? Colors.white38 : Colors.black38),
+                ) ??
+                TextStyle(
+                  color: enabled
+                      ? (isDark ? Colors.white70 : Colors.black54)
+                      : (isDark ? Colors.white38 : Colors.black38),
+                ),
+            prefixIcon: prefixIcon ??
+                Icon(
+                  Icons.search,
+                  color: enabled
+                      ? (isDark ? Colors.white70 : Colors.black54)
+                      : (isDark ? Colors.white38 : Colors.black38),
+                ),
             suffixIcon: suffixIcon,
             border: InputBorder.none,
-            contentPadding: contentPadding ?? const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 12.0,
-            ),
+            contentPadding: contentPadding ??
+                const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 12.0,
+                ),
           ),
           onTap: enabled ? onTap : null,
           onChanged: enabled ? onChanged : null,
@@ -103,4 +107,4 @@ class GlassSearchBar extends StatelessWidget {
       ),
     );
   }
-} 
+}

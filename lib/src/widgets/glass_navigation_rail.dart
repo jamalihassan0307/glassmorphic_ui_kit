@@ -45,9 +45,10 @@ class GlassNavigationRail extends StatelessWidget {
       width: width,
       blur: blur,
       opacity: opacity,
-      borderRadius: borderRadius ?? const BorderRadius.horizontal(
-        right: Radius.circular(16),
-      ),
+      borderRadius: borderRadius ??
+          const BorderRadius.horizontal(
+            right: Radius.circular(16),
+          ),
       gradient: gradient,
       child: NavigationRail(
         selectedIndex: selectedIndex,
@@ -108,4 +109,4 @@ class GlassNavigationRailDestination extends NavigationRailDestination {
             child: label,
           ),
         );
-} 
+}

@@ -53,10 +53,11 @@ class DrawerContent extends StatelessWidget {
         ListTile(
           leading: const Icon(Icons.info, color: Colors.white),
           title: const Text('About', style: TextStyle(color: Colors.white)),
-          subtitle: const Text('Version 1.0.0', style: TextStyle(color: Colors.white70)),
+          subtitle: const Text('Version 1.0.0',
+              style: TextStyle(color: Colors.white70)),
           onTap: () => Navigator.pop(context),
         ),
       ],
     );
   }
-} 
+}

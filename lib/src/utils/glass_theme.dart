@@ -69,4 +69,4 @@ double? lerpDouble(double? a, double? b, double t) {
   if (a == null) return b! * t;
   if (b == null) return a * (1.0 - t);
   return a + (b - a) * t;
-} 
+}

@@ -39,9 +39,10 @@ class GlassNavigationBar extends StatelessWidget {
       height: height,
       blur: blur,
       opacity: opacity,
-      borderRadius: borderRadius ?? const BorderRadius.vertical(
-        top: Radius.circular(16),
-      ),
+      borderRadius: borderRadius ??
+          const BorderRadius.vertical(
+            top: Radius.circular(16),
+          ),
       gradient: gradient,
       child: NavigationBar(
         selectedIndex: selectedIndex,
@@ -106,4 +107,4 @@ class GlassNavigationDestination extends NavigationDestination {
       tooltip: tooltip,
     );
   }
-} 
+}

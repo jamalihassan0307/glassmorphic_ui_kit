@@ -29,8 +29,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       vsync: this,
     );
 
-    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(_fadeController);
-    _scaleAnimation = Tween<double>(begin: 0.8, end: 1.0).animate(_scaleController);
+    _fadeAnimation =
+        Tween<double>(begin: 0.0, end: 1.0).animate(_fadeController);
+    _scaleAnimation =
+        Tween<double>(begin: 0.8, end: 1.0).animate(_scaleController);
 
     _fadeController.forward();
     _scaleController.forward();
@@ -105,4 +107,4 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       ),
     );
   }
-} 
+}
