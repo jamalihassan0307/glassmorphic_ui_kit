@@ -1,3 +1,17 @@
+## 1.0.2
+
+* Added Roboto font assets
+* Created generated assets class for better asset management
+* Fixed flutter_blur dependency version
+* Improved font handling and asset organization
+
+## 1.0.1
+
+* Fixed dependency issues
+* Improved documentation
+* Added example project
+* Enhanced cross-platform support
+
 ## 1.0.0
 
 * Initial release of Glassmorphic UI Kit
