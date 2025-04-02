@@ -64,7 +64,7 @@ class GlassNavigationDestination extends NavigationDestination {
   final Color? selectedLabelColor;
   final Color? unselectedLabelColor;
 
-  const GlassNavigationDestination({
+  GlassNavigationDestination({
     Key? key,
     required Widget icon,
     required String label,
@@ -77,23 +77,33 @@ class GlassNavigationDestination extends NavigationDestination {
     String? tooltip,
   }) : super(
           key: key,
-          icon: IconTheme(
-            data: IconThemeData(
-              size: iconSize,
-              color: unselectedIconColor ?? Colors.white70,
-            ),
-            child: icon,
-          ),
-          selectedIcon: selectedIcon != null
-              ? IconTheme(
-                  data: IconThemeData(
-                    size: iconSize,
-                    color: selectedIconColor ?? Colors.white,
-                  ),
-                  child: selectedIcon,
-                )
-              : null,
+          icon: icon,
+          selectedIcon: selectedIcon,
           label: label,
           tooltip: tooltip,
         );
+
+  @override
+  Widget build(BuildContext context) {
+    return NavigationDestination(
+      icon: IconTheme(
+        data: IconThemeData(
+          size: iconSize,
+          color: unselectedIconColor ?? Colors.white70,
+        ),
+        child: icon,
+      ),
+      selectedIcon: selectedIcon != null
+          ? IconTheme(
+              data: IconThemeData(
+                size: iconSize,
+                color: selectedIconColor ?? Colors.white,
+              ),
+              child: selectedIcon!,
+            )
+          : null,
+      label: label,
+      tooltip: tooltip,
+    );
+  }
 } 
