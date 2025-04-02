@@ -391,6 +391,243 @@ GlassContainer(
 )
 ```
 
+#### 2. Glass Button
+<div align="center">
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Button"/>
+</div>
+
+```dart
+GlassButton(
+  onPressed: () => print('Button pressed'),
+  blur: 10,
+  borderRadius: BorderRadius.circular(15),
+  gradient: LinearGradient(
+    colors: [
+      Colors.blue.withAlpha(77),
+      Colors.purple.withAlpha(51),
+    ],
+  ),
+  padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+  child: Row(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      Icon(Icons.add, color: Colors.white),
+      SizedBox(width: 8),
+      Text("Glass Button", style: TextStyle(color: Colors.white)),
+    ],
+  ),
+)
+```
+
+#### 3. Glass Card
+<div align="center">
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Card"/>
+</div>
+
+```dart
+GlassCard(
+  width: double.infinity,
+  height: 200,
+  blur: 20,
+  borderRadius: BorderRadius.circular(20),
+  gradient: LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Colors.white.withAlpha(51),
+      Colors.white.withAlpha(26),
+    ],
+  ),
+  child: Padding(
+    padding: EdgeInsets.all(16),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Glass Card Title",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 8),
+        Text(
+          "This is a card with glass effect that can contain any widget.",
+          style: TextStyle(color: Colors.white70),
+        ),
+      ],
+    ),
+  ),
+)
+```
+
+#### 4. Glass Dialog
+<div align="center">
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Dialog"/>
+</div>
+
+```dart
+showDialog(
+  context: context,
+  builder: (context) => GlassDialog(
+    title: Text(
+      'Glass Dialog',
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    content: Text(
+      'This is a glassmorphic dialog with blur effect and gradient overlay.',
+      style: TextStyle(color: Colors.white),
+    ),
+    actions: [
+      GlassButton(
+        onPressed: () => Navigator.pop(context),
+        child: Text('Cancel', style: TextStyle(color: Colors.white)),
+      ),
+      GlassButton(
+        onPressed: () => Navigator.pop(context, true),
+        child: Text('Confirm', style: TextStyle(color: Colors.white)),
+      ),
+    ],
+  ),
+)
+```
+
+#### 5. Glass Bottom Sheet
+<div align="center">
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Bottom Sheet"/>
+</div>
+
+```dart
+showModalBottomSheet(
+  context: context,
+  backgroundColor: Colors.transparent,
+  builder: (context) => GlassContainer(
+    height: 300,
+    gradient: LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Colors.white.withAlpha(51),
+        Colors.white.withAlpha(26),
+      ],
+    ),
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        ListTile(
+          leading: Icon(Icons.share, color: Colors.white),
+          title: Text('Share', style: TextStyle(color: Colors.white)),
+          onTap: () => Navigator.pop(context),
+        ),
+        ListTile(
+          leading: Icon(Icons.edit, color: Colors.white),
+          title: Text('Edit', style: TextStyle(color: Colors.white)),
+          onTap: () => Navigator.pop(context),
+        ),
+      ],
+    ),
+  ),
+)
+```
+
+#### 6. Glass Text Field
+<div align="center">
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Text Field"/>
+</div>
+
+```dart
+GlassTextField(
+  controller: _textController,
+  hintText: 'Enter text...',
+  blur: 10,
+  borderRadius: BorderRadius.circular(15),
+  gradient: LinearGradient(
+    colors: [
+      Colors.white.withAlpha(51),
+      Colors.white.withAlpha(26),
+    ],
+  ),
+  style: TextStyle(color: Colors.white),
+  cursorColor: Colors.white,
+  decoration: InputDecoration(
+    prefixIcon: Icon(Icons.search, color: Colors.white70),
+    border: InputBorder.none,
+    hintStyle: TextStyle(color: Colors.white70),
+  ),
+)
+```
+
+#### 7. Glass Progress Indicator
+<div align="center">
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Progress Indicator"/>
+</div>
+
+```dart
+GlassProgressIndicator(
+  value: 0.7, // 70% progress
+  height: 8.0,
+  blur: 10,
+  borderRadius: BorderRadius.circular(4),
+  gradient: LinearGradient(
+    colors: [
+      Colors.blue.withAlpha(77),
+      Colors.purple.withAlpha(51),
+    ],
+  ),
+)
+```
+
+#### 8. Glass Slider
+<div align="center">
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Slider"/>
+</div>
+
+```dart
+GlassSlider(
+  value: _sliderValue,
+  onChanged: (value) => setState(() => _sliderValue = value),
+  min: 0.0,
+  max: 100.0,
+  divisions: 10,
+  label: '${_sliderValue.round()}',
+  activeColor: Colors.white.withAlpha(200),
+  inactiveColor: Colors.white.withAlpha(100),
+  blur: 10,
+  borderRadius: BorderRadius.circular(10),
+)
+```
+
+#### 9. Animated Glass Container
+<div align="center">
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Animated Glass Container"/>
+</div>
+
+```dart
+AnimatedGlassContainer(
+  duration: Duration(milliseconds: 500),
+  width: _isExpanded ? 300 : 200,
+  height: _isExpanded ? 200 : 100,
+  blur: _isExpanded ? 20 : 10,
+  gradient: LinearGradient(
+    colors: [
+      Colors.white.withAlpha(_isExpanded ? 51 : 26),
+      Colors.white.withAlpha(_isExpanded ? 26 : 13),
+    ],
+  ),
+  child: Center(
+    child: Text(
+      "Tap to Animate",
+      style: TextStyle(color: Colors.white),
+    ),
+  ),
+)
+```
+
 ## Theming 🎨
 
 You can create a consistent glass effect theme across your app:
