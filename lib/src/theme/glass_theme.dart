@@ -25,8 +25,8 @@ class GlassTheme {
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
       colors: [
-        baseColor.withAlpha(51),  // 0.2 opacity = 51 in alpha (255 * 0.2)
-        baseColor.withAlpha(26),  // 0.1 opacity = 26 in alpha (255 * 0.1)
+        baseColor.withAlpha(51), // 0.2 opacity = 51 in alpha (255 * 0.2)
+        baseColor.withAlpha(26), // 0.1 opacity = 26 in alpha (255 * 0.1)
       ],
     );
   }
