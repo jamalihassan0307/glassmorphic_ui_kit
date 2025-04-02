@@ -71,12 +71,10 @@ class GlassNavigationRailDestination extends NavigationRailDestination {
   ///
   /// The [icon] and [label] arguments must not be null.
   const GlassNavigationRailDestination({
-    Key? key,
     required Widget icon,
     required Widget label,
     Widget? selectedIcon,
   }) : super(
-          key: key,
           icon: icon,
           label: label,
           selectedIcon: selectedIcon,
