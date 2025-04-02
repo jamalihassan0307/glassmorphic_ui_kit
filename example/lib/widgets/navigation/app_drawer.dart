@@ -20,46 +20,35 @@ class AppDrawer extends StatelessWidget {
       children: [
         _buildHeader(),
         const Divider(color: Colors.white24),
-        _buildNavigationSection(
+        _buildNavigationItem(
           context,
-          'Navigation',
-          [
-            ('Navigation Bar', '/navigation/bar'),
-            ('Navigation Rail', '/navigation/rail'),
-            ('Navigation Drawer', '/navigation/drawer'),
-            ('Tab Bar', '/navigation/tabs'),
-          ],
+          'Components Gallery',
+          Icons.widgets,
+          '/components',
         ),
-        _buildNavigationSection(
+        _buildNavigationItem(
           context,
-          'Inputs',
-          [
-            ('Buttons', '/components#inputs'),
-            ('Text Fields', '/components#inputs'),
-            ('Sliders', '/components#inputs'),
-            ('Switches', '/components#inputs'),
-            ('Menu Button', '/components#inputs'),
-            ('Search Bar', '/components#inputs'),
-          ],
+          'Navigation Bar',
+          Icons.navigation,
+          '/navigation/bar',
         ),
-        _buildNavigationSection(
+        _buildNavigationItem(
           context,
-          'Feedback',
-          [
-            ('Dialogs', '/components#feedback'),
-            ('Bottom Sheets', '/components#feedback'),
-            ('Progress Indicators', '/components#feedback'),
-          ],
+          'Navigation Rail',
+          Icons.view_sidebar,
+          '/navigation/rail',
         ),
-        _buildNavigationSection(
+        _buildNavigationItem(
           context,
-          'Layout',
-          [
-            ('Container', '/components#layout'),
-            ('Card', '/components#layout'),
-            ('List Tile', '/components#layout'),
-            ('Scaffold', '/components#layout'),
-          ],
+          'Navigation Drawer',
+          Icons.menu,
+          '/navigation/drawer',
+        ),
+        _buildNavigationItem(
+          context,
+          'Tab Bar',
+          Icons.tab,
+          '/navigation/tabs',
         ),
       ],
     );
@@ -93,37 +82,24 @@ class AppDrawer extends StatelessWidget {
     );
   }
 
-  Widget _buildNavigationSection(
+  Widget _buildNavigationItem(
     BuildContext context,
     String title,
-    List<(String, String)> items,
+    IconData icon,
+    String route,
   ) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-          child: Text(
-            title,
-            style: const TextStyle(
-              color: Colors.white70,
-              fontSize: 12,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        ...items.map(
-          (item) => ListTile(
-            leading: const Icon(Icons.chevron_right, color: Colors.white70),
-            title: Text(
-              item.$1,
-              style: const TextStyle(color: Colors.white),
-            ),
-            onTap: () => Navigator.pushNamed(context, item.$2),
-          ),
-        ),
-        const Divider(color: Colors.white24),
-      ],
+    return ListTile(
+      leading: Icon(icon, color: Colors.white70),
+      title: Text(
+        title,
+        style: const TextStyle(color: Colors.white),
+      ),
+      onTap: () {
+        Navigator.pop(context); // Close the drawer
+        if (ModalRoute.of(context)?.settings.name != route) {
+          Navigator.pushNamed(context, route);
+        }
+      },
     );
   }
 }
