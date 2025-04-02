@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/navigation/navigation_bar_screen.dart';
 import 'screens/navigation/navigation_drawer_screen.dart';
+import 'screens/navigation/navigation_rail_screen.dart';
 import 'widgets/navigation/app_drawer.dart';
 import 'widgets/navigation/app_navigation_bar.dart';
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/navigation/bar': (context) => const NavigationBarScreen(),
         '/navigation/drawer': (context) => const NavigationDrawerScreen(),
+        '/navigation/rail': (context) => const NavigationRailScreen(),
         // Add more routes here as we create more screens
       },
     );
