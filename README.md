@@ -248,8 +248,8 @@ GlassNavigationRail(
 
 #### 1. Navigation Drawer
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/main/screenshots/drawer.gif" width="250" alt="Basic Drawer"/>
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/main/screenshots/navigation_drawer.gif" width="250" alt="Custom Drawer"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/drawer.gif" width="250" alt="Basic Drawer"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/navigation_drawer.gif" width="250" alt="Custom Drawer"/>
 </div>
 
 ```dart
@@ -284,8 +284,8 @@ GlassNavigationDrawer(
 
 #### 2. Navigation Bar
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/main/screenshots/navigation_bar.png" width="250" alt="Basic Navigation Bar"/>
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/main/screenshots/navigation_bar.gif" width="250" alt="Interactive Navigation Bar"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/navigation_bar.png" width="250" alt="Basic Navigation Bar"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/navigation_bar.gif" width="250" alt="Interactive Navigation Bar"/>
 </div>
 
 ```dart
@@ -314,8 +314,8 @@ GlassNavigationBar(
 
 #### 3. Navigation Rail
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/main/screenshots/navigation_rail.png" width="250" alt="Basic Navigation Rail"/>
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/main/screenshots/navigation_rail.gif" width="250" alt="Interactive Navigation Rail"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/navigation_rail.png" width="250" alt="Basic Navigation Rail"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/navigation_rail.gif" width="250" alt="Interactive Navigation Rail"/>
 </div>
 
 ```dart
@@ -351,8 +351,8 @@ GlassNavigationRail(
 
 #### 4. Tab Bar
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/main/screenshots/tab_bar.png" width="250" alt="Basic Tab Bar"/>
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/main/screenshots/tab_bar.gif" width="250" alt="Interactive Tab Bar"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/tab_bar.png" width="250" alt="Basic Tab Bar"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/tab_bar.gif" width="250" alt="Interactive Tab Bar"/>
 </div>
 
 ```dart
@@ -370,7 +370,7 @@ GlassTabBar(
 
 #### 1. Glass Container
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/main/screenshots/components.gif" width="300" alt="Glass Components"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Components"/>
 </div>
 
 ```dart
