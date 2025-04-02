@@ -3,97 +3,60 @@ import 'package:flutter/gestures.dart';
 import 'glass_container.dart';
 import '../utils/glass_constants.dart';
 
-/// A tab bar with a glassmorphic effect.
+/// A Material Design tab bar with a glassmorphic effect.
+///
+/// A tab bar displays a row of tabs, each representing a different view in an app.
+/// This widget adds a glass effect to the standard [TabBar] widget.
 class GlassTabBar extends StatelessWidget implements PreferredSizeWidget {
-  final List<Widget> tabs;
-  final TabController? controller;
-  final bool isScrollable;
-  final EdgeInsetsGeometry? padding;
-  final Color? indicatorColor;
-  final double indicatorWeight;
-  final EdgeInsetsGeometry? indicatorPadding;
-  final Decoration? indicator;
-  final TabBarIndicatorSize? indicatorSize;
-  final Color? labelColor;
-  final TextStyle? labelStyle;
-  final EdgeInsetsGeometry? labelPadding;
-  final Color? unselectedLabelColor;
-  final TextStyle? unselectedLabelStyle;
-  final DragStartBehavior dragStartBehavior;
-  final MouseCursor? mouseCursor;
-  final ScrollPhysics? physics;
-  final InteractiveInkFeatureFactory? splashFactory;
-  final BorderRadius? borderRadius;
-  final double blur;
-  final double opacity;
-  final Gradient? gradient;
-  final double height;
+  /// The controller for this tab bar.
+  final TabController controller;
 
+  /// The tabs to display in this tab bar.
+  final List<Widget> tabs;
+
+  /// The intensity of the blur effect.
+  ///
+  /// Defaults to [GlassConstants.defaultBlur].
+  final double blur;
+
+  /// The opacity of the glass effect.
+  ///
+  /// Defaults to [GlassConstants.defaultOpacity].
+  final double opacity;
+
+  /// Optional gradient to be applied over the blur effect.
+  final Gradient? gradient;
+
+  /// Creates a glass tab bar.
+  ///
+  /// The [controller] and [tabs] arguments must not be null.
   const GlassTabBar({
     Key? key,
+    required this.controller,
     required this.tabs,
-    this.controller,
-    this.isScrollable = false,
-    this.padding,
-    this.indicatorColor,
-    this.indicatorWeight = 2.0,
-    this.indicatorPadding,
-    this.indicator,
-    this.indicatorSize,
-    this.labelColor,
-    this.labelStyle,
-    this.labelPadding,
-    this.unselectedLabelColor,
-    this.unselectedLabelStyle,
-    this.dragStartBehavior = DragStartBehavior.start,
-    this.mouseCursor,
-    this.physics,
-    this.splashFactory,
-    this.borderRadius,
     this.blur = GlassConstants.defaultBlur,
     this.opacity = GlassConstants.defaultOpacity,
     this.gradient,
-    this.height = kToolbarHeight,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
-    final bool isDark = theme.brightness == Brightness.dark;
-
     return GlassContainer(
-      height: height,
       blur: blur,
       opacity: opacity,
-      borderRadius: borderRadius,
       gradient: gradient,
       child: TabBar(
         controller: controller,
         tabs: tabs,
-        isScrollable: isScrollable,
-        padding: padding,
-        indicatorColor:
-            indicatorColor ?? (isDark ? Colors.white : Colors.black),
-        indicatorWeight: indicatorWeight,
-        indicatorPadding: indicatorPadding ?? EdgeInsets.zero,
-        indicator: indicator,
-        indicatorSize: indicatorSize,
-        labelColor: labelColor ?? (isDark ? Colors.white : Colors.black),
-        labelStyle: labelStyle,
-        labelPadding: labelPadding,
-        unselectedLabelColor:
-            unselectedLabelColor ?? (isDark ? Colors.white60 : Colors.black54),
-        unselectedLabelStyle: unselectedLabelStyle,
-        dragStartBehavior: dragStartBehavior,
-        mouseCursor: mouseCursor,
-        physics: physics,
-        splashFactory: splashFactory,
+        indicatorColor: Colors.white,
+        labelColor: Colors.white,
+        unselectedLabelColor: Colors.white70,
       ),
     );
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(height);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
 /// A tab with a glassmorphic effect.
