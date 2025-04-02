@@ -68,7 +68,8 @@ class _MainScreenState extends State<MainScreen> {
               ),
               AppNavigationBar(
                 selectedIndex: _selectedIndex,
-                onDestinationSelected: (index) => setState(() => _selectedIndex = index),
+                onDestinationSelected: (index) =>
+                    setState(() => _selectedIndex = index),
               ),
             ],
           ),

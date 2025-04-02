@@ -40,4 +40,4 @@ class AppNavigationBar extends StatelessWidget {
       ],
     );
   }
-} 
+}

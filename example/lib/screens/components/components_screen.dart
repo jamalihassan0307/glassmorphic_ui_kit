@@ -228,7 +228,8 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                 leading: const Icon(Icons.star, color: Colors.white),
                 title: const Text('Glass List Tile'),
                 subtitle: const Text('With leading and trailing icons'),
-                trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white70),
+                trailing:
+                    const Icon(Icons.arrow_forward_ios, color: Colors.white70),
                 onTap: () {},
               ),
             ],
@@ -288,4 +289,4 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
       ),
     );
   }
-} 
+}

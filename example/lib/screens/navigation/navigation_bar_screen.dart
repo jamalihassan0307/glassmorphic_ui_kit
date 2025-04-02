@@ -39,7 +39,8 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
               const SizedBox(height: 20),
               GlassNavigationBar(
                 selectedIndex: _selectedIndex,
-                onDestinationSelected: (index) => setState(() => _selectedIndex = index),
+                onDestinationSelected: (index) =>
+                    setState(() => _selectedIndex = index),
                 destinations: const [
                   GlassNavigationDestination(
                     icon: Icon(Icons.home_outlined, color: Colors.white70),
@@ -90,7 +91,8 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
               const SizedBox(height: 20),
               GlassNavigationBar(
                 selectedIndex: _selectedIndex,
-                onDestinationSelected: (index) => setState(() => _selectedIndex = index),
+                onDestinationSelected: (index) =>
+                    setState(() => _selectedIndex = index),
                 gradient: LinearGradient(
                   colors: [
                     Colors.purple.withAlpha(77),
@@ -121,4 +123,4 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
       ],
     );
   }
-} 
+}
