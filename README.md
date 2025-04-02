@@ -54,7 +54,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  glassmorphic_ui_kit: ^1.0.0
+  glassmorphic_ui_kit: ^1.0.4
 ```
 
 ## Usage 💻
@@ -69,8 +69,8 @@ GlassContainer(
   borderRadius: BorderRadius.circular(15),
   gradient: LinearGradient(
     colors: [
-      Colors.white.withOpacity(0.2),
-      Colors.white.withOpacity(0.1),
+      Colors.white.withAlpha(51),  // 0.2 opacity
+      Colors.white.withAlpha(26),  // 0.1 opacity
     ],
   ),
   child: Center(child: Text("Glassmorphic Container")),
@@ -137,6 +137,7 @@ All components support extensive customization:
 2. Maintain readable text contrast
 3. Consider performance impact with multiple overlapping effects
 4. Test on various devices for consistent appearance
+5. Use withAlpha instead of withOpacity for better precision
 
 ### Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
