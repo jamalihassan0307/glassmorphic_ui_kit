@@ -23,6 +23,49 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
+  void _showGlassDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) => GlassDialog(
+        title: const Text('Glass Dialog', style: TextStyle(color: Colors.white)),
+        content: const Text(
+          'This is a glassmorphic dialog!',
+          style: TextStyle(color: Colors.white),
+        ),
+        actions: [
+          GlassButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Close', style: TextStyle(color: Colors.white)),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showGlassBottomSheet(BuildContext context) {
+    GlassBottomSheet.show(
+      context: context,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text(
+            'Glass Bottom Sheet',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 16),
+          GlassButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Close', style: TextStyle(color: Colors.white)),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,9 +101,17 @@ class MyHomePage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               GlassButton(
-                onPressed: () {},
+                onPressed: () => _showGlassDialog(context),
                 child: const Text(
-                  "Glass Button",
+                  "Show Glass Dialog",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              const SizedBox(height: 20),
+              GlassButton(
+                onPressed: () => _showGlassBottomSheet(context),
+                child: const Text(
+                  "Show Bottom Sheet",
                   style: TextStyle(color: Colors.white),
                 ),
               ),
