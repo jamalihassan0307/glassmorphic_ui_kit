@@ -33,6 +33,11 @@ class GlassNavigationRail extends StatelessWidget {
   /// Optional gradient to be applied over the blur effect.
   final Gradient? gradient;
 
+  /// The elevation of the glass navigation rail.
+  ///
+  /// Defaults to 1.
+  final double elevation;
+
   /// Creates a glass navigation rail.
   ///
   /// The [selectedIndex] must be a valid index in [destinations].
@@ -45,6 +50,7 @@ class GlassNavigationRail extends StatelessWidget {
     this.blur = GlassConstants.defaultBlur,
     this.opacity = GlassConstants.defaultOpacity,
     this.gradient,
+    this.elevation = 1,
   }) : super(key: key);
 
   @override
@@ -57,9 +63,9 @@ class GlassNavigationRail extends StatelessWidget {
         selectedIndex: selectedIndex,
         onDestinationSelected: onDestinationSelected,
         leading: leading,
+        elevation: elevation,
         destinations: destinations,
         backgroundColor: Colors.transparent,
-        elevation: 0,
       ),
     );
   }
