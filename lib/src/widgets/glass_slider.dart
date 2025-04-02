@@ -14,7 +14,14 @@ class GlassSlider extends StatelessWidget {
   final String? label;
   final Color? activeColor;
   final Color? inactiveColor;
+  final Color? activeTrackColor;
+  final Color? inactiveTrackColor;
+  final String? activeThumbImage;
+  final String? inactiveThumbImage;
   final Color? thumbColor;
+  final Color? trackColor;
+  final IconData? thumbIcon;
+  final DragStartBehavior dragStartBehavior;
   final MaterialStateProperty<MouseCursor?>? mouseCursor;
   final double blur;
   final double opacity;
