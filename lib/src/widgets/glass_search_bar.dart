@@ -2,27 +2,91 @@ import 'package:flutter/material.dart';
 import 'glass_container.dart';
 import '../utils/glass_constants.dart';
 
-/// A search bar with a glassmorphic effect.
+/// A search bar widget with a glassmorphic effect.
+///
+/// This widget provides a customizable search input field with a frosted glass appearance.
+/// It supports all standard text input functionality with additional glassmorphic styling options.
+///
+/// Example:
+/// ```dart
+/// GlassSearchBar(
+///   controller: _searchController,
+///   hintText: 'Search...',
+///   onChanged: (value) => _performSearch(value),
+///   prefixIcon: Icon(Icons.search),
+///   blur: 10.0,
+///   opacity: 0.2,
+/// )
+/// ```
 class GlassSearchBar extends StatelessWidget {
+  /// The controller for the search text field.
   final TextEditingController? controller;
+
+  /// The placeholder text shown when the search field is empty.
   final String? hintText;
+
+  /// The style for the input text.
   final TextStyle? textStyle;
+
+  /// The style for the hint text.
   final TextStyle? hintStyle;
+
+  /// An icon widget to show before the search text.
   final Widget? prefixIcon;
+
+  /// An icon widget to show after the search text.
   final Widget? suffixIcon;
+
+  /// Called when the search field is tapped.
   final VoidCallback? onTap;
+
+  /// Called when the search text changes.
   final ValueChanged<String>? onChanged;
+
+  /// Called when the user submits the search field.
   final ValueChanged<String>? onSubmitted;
+
+  /// The intensity of the blur effect.
+  ///
+  /// Defaults to [GlassConstants.defaultBlur].
   final double blur;
+
+  /// The opacity of the glass effect.
+  ///
+  /// Defaults to [GlassConstants.defaultOpacity].
   final double opacity;
+
+  /// The border radius of the search bar.
   final BorderRadius? borderRadius;
+
+  /// Optional gradient to be applied over the blur effect.
   final Gradient? gradient;
+
+  /// Padding around the entire search bar.
   final EdgeInsetsGeometry? padding;
+
+  /// Padding around the input text and icons.
   final EdgeInsetsGeometry? contentPadding;
+
+  /// Whether to focus the search field when it is first displayed.
+  ///
+  /// Defaults to false.
   final bool autofocus;
+
+  /// An optional focus node to control the focus of the search field.
   final FocusNode? focusNode;
+
+  /// Whether the search field is enabled.
+  ///
+  /// Defaults to true.
   final bool enabled;
 
+  /// Creates a glass search bar.
+  ///
+  /// The search bar can be customized with various visual and behavioral properties.
+  /// Use [controller] to manage the search text programmatically.
+  /// Use [onChanged] to receive updates when the search text changes.
+  /// Use [onSubmitted] to handle search submissions.
   const GlassSearchBar({
     Key? key,
     this.controller,
