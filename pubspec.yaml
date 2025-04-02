@@ -1,6 +1,6 @@
 name: glassmorphic_ui_kit
 description: A Flutter package for implementing modern glassmorphic UI trends with smooth blur effects, frosted glass appearance, and gradient overlays.
-version: 0.0.1
+version: 1.0.0
 homepage: https://github.com/yourusername/glassmorphic_ui_kit
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  flutter_blur: ^3.1.0
+  flutter_blur: 
   vector_math: ^2.1.4
 
 dev_dependencies:
