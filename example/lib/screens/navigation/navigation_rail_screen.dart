@@ -125,17 +125,20 @@ class _NavigationRailScreenState extends State<NavigationRailScreen> {
                   ),
                   destinations: const [
                     GlassNavigationRailDestination(
-                      icon: Icon(Icons.dashboard_outlined, color: Colors.white70),
+                      icon:
+                          Icon(Icons.dashboard_outlined, color: Colors.white70),
                       selectedIcon: Icon(Icons.dashboard, color: Colors.white),
                       label: Text('Dashboard'),
                     ),
                     GlassNavigationRailDestination(
-                      icon: Icon(Icons.analytics_outlined, color: Colors.white70),
+                      icon:
+                          Icon(Icons.analytics_outlined, color: Colors.white70),
                       selectedIcon: Icon(Icons.analytics, color: Colors.white),
                       label: Text('Analytics'),
                     ),
                     GlassNavigationRailDestination(
-                      icon: Icon(Icons.settings_outlined, color: Colors.white70),
+                      icon:
+                          Icon(Icons.settings_outlined, color: Colors.white70),
                       selectedIcon: Icon(Icons.settings, color: Colors.white),
                       label: Text('Settings'),
                     ),

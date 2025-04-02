@@ -51,7 +51,6 @@ class AppDrawer extends StatelessWidget {
           '/navigation/tabs',
         ),
         const SizedBox(height: 100),
-       
       ],
     );
   }
