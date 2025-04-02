@@ -96,8 +96,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
         colors: [
-          Colors.white.withOpacity(0.2),
-          Colors.white.withOpacity(0.1),
+          Colors.white.withAlpha(51),
+          Colors.white.withAlpha(26),
         ],
       ),
       child: Column(
@@ -123,8 +123,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             onPressed: () => Navigator.pop(context),
             gradient: LinearGradient(
               colors: [
-                Colors.blue.withOpacity(0.3),
-                Colors.purple.withOpacity(0.2),
+                Colors.blue.withAlpha(77),
+                Colors.purple.withAlpha(51),
               ],
             ),
             child: const Text('Close', style: TextStyle(color: Colors.white)),
@@ -176,8 +176,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                         colors: [
-                          Colors.white.withOpacity(0.2),
-                          Colors.white.withOpacity(0.1),
+                          Colors.white.withAlpha(51),
+                          Colors.white.withAlpha(26),
                         ],
                       ),
                       child: const Center(
@@ -214,8 +214,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                         borderRadius: BorderRadius.circular(15),
                         gradient: LinearGradient(
                           colors: [
-                            Colors.blue.withOpacity(0.3),
-                            Colors.blue.withOpacity(0.1),
+                            Colors.blue.withAlpha(77),
+                            Colors.blue.withAlpha(26),
                           ],
                         ),
                         child: const Center(
@@ -241,8 +241,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                         borderRadius: BorderRadius.circular(15),
                         gradient: LinearGradient(
                           colors: [
-                            Colors.purple.withOpacity(0.3),
-                            Colors.purple.withOpacity(0.1),
+                            Colors.purple.withAlpha(77),
+                            Colors.purple.withAlpha(26),
                           ],
                         ),
                         child: const Center(
@@ -272,8 +272,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                         borderRadius: BorderRadius.circular(30),
                         gradient: LinearGradient(
                           colors: [
-                            Colors.blue.withOpacity(0.3),
-                            Colors.purple.withOpacity(0.2),
+                            Colors.blue.withAlpha(77),
+                            Colors.purple.withAlpha(51),
                           ],
                         ),
                         padding: const EdgeInsets.symmetric(
@@ -302,8 +302,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                         borderRadius: BorderRadius.circular(30),
                         gradient: LinearGradient(
                           colors: [
-                            Colors.purple.withOpacity(0.3),
-                            Colors.blue.withOpacity(0.2),
+                            Colors.purple.withAlpha(77),
+                            Colors.blue.withAlpha(51),
                           ],
                         ),
                         padding: const EdgeInsets.symmetric(
