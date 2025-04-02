@@ -110,7 +110,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  glassmorphic_ui_kit: ^1.1.4
+  glassmorphic_ui_kit: ^1.1.5
 ```
 
 
