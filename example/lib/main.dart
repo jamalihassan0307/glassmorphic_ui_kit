@@ -58,7 +58,7 @@ class MainScreen extends StatelessWidget {
           child: Center(
             child: GlassContainer(
               width: 300,
-              height: 200,
+              height:300,
               blur: 20,
               opacity: 0.2,
               gradient: LinearGradient(
@@ -73,11 +73,22 @@ class MainScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(
+                    Builder(
+                    builder: (context) => GlassButton(
+                      onPressed: () {
+                        Scaffold.of(context).openDrawer();
+                      },
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child:  Icon(
                     Icons.menu,
                     color: Colors.white,
                     size: 48,
                   ),
+                      ),
+                    ),
+                  ),
+                  
                   const SizedBox(height: 16),
                   const Text(
                     'Welcome to',
@@ -101,7 +112,10 @@ class MainScreen extends StatelessWidget {
                       onPressed: () {
                         Scaffold.of(context).openDrawer();
                       },
-                      child: const Text('Open Menu'),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Open Menu'),
+                      ),
                     ),
                   ),
                 ],
