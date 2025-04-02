@@ -39,7 +39,7 @@ class GlassBottomSheet extends StatelessWidget {
               height: 4,
               margin: const EdgeInsets.symmetric(vertical: 8),
               decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.5),
+                color: Colors.grey.withAlpha(128),
                 borderRadius: BorderRadius.circular(2),
               ),
             ),
