@@ -1,3 +1,15 @@
+## 1.0.6
+
+* Added new glass effect widgets:
+  - GlassBottomNavigationBar: A modern navigation bar with glass effect
+  - GlassDrawer: A drawer with glass effect and custom tiles
+  - GlassProgressIndicator: A progress bar with glass effect
+* Enhanced test coverage for new components
+* Updated example app with new widget demonstrations
+* Improved documentation with usage examples for new widgets
+* Added proper state management for interactive components
+* Optimized performance for complex layouts with multiple glass effects
+
 ## 1.0.5
 
 * Improved code formatting across all files
