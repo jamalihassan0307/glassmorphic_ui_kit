@@ -2,31 +2,43 @@ import 'package:flutter/material.dart';
 import 'glass_container.dart';
 import '../utils/glass_constants.dart';
 
-/// A text field with a glassmorphic effect.
+/// A Material Design text field with a glassmorphic effect.
+///
+/// This widget creates a text input field with a frosted glass appearance.
 class GlassTextField extends StatelessWidget {
+  /// Controls the text being edited.
   final TextEditingController? controller;
-  final String? hintText;
-  final TextStyle? textStyle;
-  final TextStyle? hintStyle;
-  final double blur;
-  final double opacity;
-  final BorderRadius? borderRadius;
-  final EdgeInsetsGeometry? padding;
-  final ValueChanged<String>? onChanged;
-  final bool obscureText;
 
+  /// The text that suggests what sort of input the field accepts.
+  final String? hintText;
+
+  /// An icon that appears before the editable part of the text field.
+  final Widget? prefixIcon;
+
+  /// The intensity of the blur effect.
+  ///
+  /// Defaults to [GlassConstants.defaultBlur].
+  final double blur;
+
+  /// The opacity of the glass effect.
+  ///
+  /// Defaults to [GlassConstants.defaultOpacity].
+  final double opacity;
+
+  /// Optional gradient to be applied over the blur effect.
+  final Gradient? gradient;
+
+  /// Creates a glass text field.
+  ///
+  /// The [controller] is used to control the text being edited.
   const GlassTextField({
     Key? key,
     this.controller,
     this.hintText,
-    this.textStyle,
-    this.hintStyle,
+    this.prefixIcon,
     this.blur = GlassConstants.defaultBlur,
     this.opacity = GlassConstants.defaultOpacity,
-    this.borderRadius,
-    this.padding,
-    this.onChanged,
-    this.obscureText = false,
+    this.gradient,
   }) : super(key: key);
 
   @override
@@ -34,17 +46,20 @@ class GlassTextField extends StatelessWidget {
     return GlassContainer(
       blur: blur,
       opacity: opacity,
-      borderRadius: borderRadius ?? BorderRadius.circular(15),
+      gradient: gradient,
+      borderRadius: BorderRadius.circular(8),
       child: TextField(
         controller: controller,
-        onChanged: onChanged,
-        obscureText: obscureText,
-        style: textStyle ?? const TextStyle(color: Colors.white),
+        style: const TextStyle(color: Colors.white),
         decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: hintStyle ?? TextStyle(color: Colors.white.withAlpha(153)),
+          hintStyle: const TextStyle(color: Colors.white70),
+          prefixIcon: prefixIcon,
           border: InputBorder.none,
-          contentPadding: padding ?? const EdgeInsets.all(16),
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 16,
+            vertical: 12,
+          ),
         ),
       ),
     );
