@@ -20,6 +20,7 @@ export 'src/widgets/glass_search_bar.dart';
 export 'src/widgets/glass_slider.dart';
 export 'src/widgets/glass_switch.dart';
 export 'src/widgets/glass_tab_bar.dart';
+export 'src/widgets/glass_app_bar.dart';
 export 'src/utils/glass_constants.dart';
 export 'src/utils/glass_theme.dart';
 export 'src/utils/glass_animation.dart';
