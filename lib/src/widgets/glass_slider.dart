@@ -5,33 +5,118 @@ import 'glass_container.dart';
 import '../utils/glass_constants.dart';
 import 'package:flutter/gestures.dart';
 
-/// A slider with a glassmorphic effect.
+/// A slider widget with a glassmorphic effect.
+///
+/// This widget provides a customizable slider control with a frosted glass appearance.
+/// It supports all standard slider functionality with additional glassmorphic styling options.
+///
+/// Example:
+/// ```dart
+/// GlassSlider(
+///   value: _value,
+///   onChanged: (value) => setState(() => _value = value),
+///   min: 0.0,
+///   max: 100.0,
+///   divisions: 10,
+///   label: '${_value.round()}',
+///   blur: 10.0,
+///   opacity: 0.2,
+/// )
+/// ```
 class GlassSlider extends StatelessWidget {
+  /// The current value of the slider.
+  ///
+  /// Must be between [min] and [max], inclusive.
   final double value;
-  final ValueChanged<double>? onChanged;
+
+  /// Called when the user starts dragging the slider.
   final ValueChanged<double>? onChangeStart;
+
+  /// Called during drag operations.
+  final ValueChanged<double>? onChanged;
+
+  /// Called when the user is done selecting a new value for the slider.
   final ValueChanged<double>? onChangeEnd;
+
+  /// The minimum value the user can select.
+  ///
+  /// Defaults to 0.0.
   final double min;
+
+  /// The maximum value the user can select.
+  ///
+  /// Defaults to 1.0.
   final double max;
+
+  /// The number of discrete divisions.
+  ///
+  /// If non-null, the slider will snap to these divisions.
   final int? divisions;
+
+  /// A label to show above the slider when the user is dragging it.
   final String? label;
+
+  /// The color of the active portion of the track.
   final Color? activeColor;
+
+  /// The color of the inactive portion of the track.
   final Color? inactiveColor;
+
+  /// The color of the active portion of the track.
   final Color? activeTrackColor;
+
+  /// The color of the inactive portion of the track.
   final Color? inactiveTrackColor;
+
+  /// An image to use for the active thumb.
   final String? activeThumbImage;
+
+  /// An image to use for the inactive thumb.
   final String? inactiveThumbImage;
+
+  /// The color of the thumb.
   final Color? thumbColor;
+
+  /// The color of the track.
   final Color? trackColor;
+
+  /// An icon to show on the thumb.
   final IconData? thumbIcon;
+
+  /// Determines how drag start behavior is handled.
+  ///
+  /// Defaults to [DragStartBehavior.start].
   final DragStartBehavior dragStartBehavior;
+
+  /// The cursor for a mouse pointer when it enters or is hovering over the slider.
   final MaterialStateMouseCursor? mouseCursor;
+
+  /// The intensity of the blur effect.
+  ///
+  /// Defaults to [GlassConstants.defaultBlur].
   final double blur;
+
+  /// The opacity of the glass effect.
+  ///
+  /// Defaults to [GlassConstants.defaultOpacity].
   final double opacity;
+
+  /// Optional gradient to be applied over the blur effect.
   final Gradient? gradient;
+
+  /// The height of the track.
+  ///
+  /// Defaults to 4.0.
   final double trackHeight;
+
+  /// The border radius of the slider track and thumb.
   final BorderRadius? borderRadius;
 
+  /// Creates a glass slider.
+  ///
+  /// The [value] parameter must not be null and must be between [min] and [max], inclusive.
+  /// The [min] parameter must be less than or equal to [max].
+  /// The [divisions] parameter must be null or greater than 0.
   const GlassSlider({
     Key? key,
     required this.value,
