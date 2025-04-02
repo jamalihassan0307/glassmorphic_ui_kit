@@ -1,12 +1,27 @@
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:glassmorphic_ui_kit/glassmorphic_ui_kit.dart';
+import 'package:flutter/material.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
+  testWidgets('GlassContainer creates glass effect', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(
+          body: GlassContainer(
+            width: 200,
+            height: 200,
+            blur: 10,
+            opacity: 0.2,
+            child: Center(
+              child: Text('Test'),
+            ),
+          ),
+        ),
+      ),
+    );
+
+    expect(find.byType(GlassContainer), findsOneWidget);
+    expect(find.byType(BackdropFilter), findsOneWidget);
+    expect(find.text('Test'), findsOneWidget);
   });
 }
