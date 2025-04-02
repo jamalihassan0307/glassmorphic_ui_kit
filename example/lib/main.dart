@@ -34,6 +34,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   late AnimationController _scaleController;
   late Animation<double> _fadeAnimation;
   late Animation<double> _scaleAnimation;
+  int _currentIndex = 0;
 
   @override
   void initState() {
@@ -134,9 +135,77 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     );
   }
 
+  Widget _buildDrawerContent() {
+    return Column(
+      children: [
+        Container(
+          padding: const EdgeInsets.all(16),
+          child: const Row(
+            children: [
+              CircleAvatar(
+                radius: 32,
+                backgroundColor: Colors.white24,
+                child: Icon(Icons.person, color: Colors.white, size: 32),
+              ),
+              SizedBox(width: 16),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'John Doe',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'john.doe@example.com',
+                    style: TextStyle(color: Colors.white70),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        const Divider(color: Colors.white24),
+        GlassDrawerTile(
+          leading: const Icon(Icons.home),
+          title: const Text('Home'),
+          selected: true,
+          onTap: () {},
+        ),
+        GlassDrawerTile(
+          leading: const Icon(Icons.settings),
+          title: const Text('Settings'),
+          onTap: () {},
+        ),
+        GlassDrawerTile(
+          leading: const Icon(Icons.info),
+          title: const Text('About'),
+          subtitle: const Text('Version 1.0.0'),
+          onTap: () {},
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: GlassDrawer(
+        blur: 10,
+        opacity: 0.2,
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Colors.white.withAlpha(51),
+            Colors.white.withAlpha(26),
+          ],
+        ),
+        child: _buildDrawerContent(),
+      ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -332,6 +401,28 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: GlassBottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: (index) => setState(() => _currentIndex = index),
+        items: const [
+          GlassBottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          GlassBottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
+          ),
+          GlassBottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+          GlassBottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
+        ],
       ),
     );
   }
