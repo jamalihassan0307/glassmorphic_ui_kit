@@ -1,10 +1,6 @@
 
 
 <div align="center">
-  <kbd>
-    <img src="https://github.com/jamalihassan0307/glassmorphic_ui_kit/blob/main/image/image.jpg?raw=true" width="250" alt="Jam Ali Hassan"/>
-  </kbd>
-  
   <h1>🌟 Glassmorphic UI Kit 🌟</h1>
   <p><i>Modern, beautiful glass effects for Flutter apps</i></p>
   
