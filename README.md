@@ -121,8 +121,8 @@ dependencies:
 
 #### 1. Navigation Drawer
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/drawer.gif" width="250" alt="Basic Drawer"/>
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/navigation_drawer.gif" width="250" alt="Custom Drawer"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/gif/drawer_gif.gif" width="250" alt="Basic Drawer"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/images/drawer.jpg" width="250" alt="Custom Drawer"/>
 </div>
 
 ```dart
@@ -157,8 +157,8 @@ GlassNavigationDrawer(
 
 #### 2. Navigation Bar
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/navigation_bar.png" width="250" alt="Basic Navigation Bar"/>
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/navigation_bar.gif" width="250" alt="Interactive Navigation Bar"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/images/navigation_bar.jpg" width="250" alt="Basic Navigation Bar"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/gif/navigation_bar_gif.gif" width="250" alt="Interactive Navigation Bar"/>
 </div>
 
 ```dart
@@ -187,8 +187,8 @@ GlassNavigationBar(
 
 #### 3. Navigation Rail
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/navigation_rail.png" width="250" alt="Basic Navigation Rail"/>
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/navigation_rail.gif" width="250" alt="Interactive Navigation Rail"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/images/navigation_tabs.jpg" width="250" alt="Basic Navigation Rail"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/gif/navigation_tabs_gif.gif" width="250" alt="Interactive Navigation Rail"/>
 </div>
 
 ```dart
@@ -224,8 +224,8 @@ GlassNavigationRail(
 
 #### 4. Tab Bar
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/tab_bar.png" width="250" alt="Basic Tab Bar"/>
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/tab_bar.gif" width="250" alt="Interactive Tab Bar"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/images/tab_bar.jpg" width="250" alt="Basic Tab Bar"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/gif/tab_bar_gif.gif" width="250" alt="Interactive Tab Bar"/>
 </div>
 
 ```dart
@@ -243,7 +243,7 @@ GlassTabBar(
 
 #### 1. Glass Container
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Components"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/gif/components_gif.gif" width="300" alt="Glass Components"/>
 </div>
 
 ```dart
@@ -266,7 +266,7 @@ GlassContainer(
 
 #### 2. Glass Button
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Button"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/images/components.jpg" width="300" alt="Glass Button"/>
 </div>
 
 ```dart
@@ -294,7 +294,7 @@ GlassButton(
 
 #### 3. Glass Card
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Card"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/images/components1.jpg" width="300" alt="Glass Card"/>
 </div>
 
 ```dart
@@ -337,7 +337,7 @@ GlassCard(
 
 #### 4. Glass Dialog
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Dialog"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/gif/alerts_gif.gif" width="300" alt="Glass Dialog"/>
 </div>
 
 ```dart
@@ -372,7 +372,7 @@ showDialog(
 
 #### 5. Glass Bottom Sheet
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Bottom Sheet"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/images/alerts.jpg" width="300" alt="Glass Bottom Sheet"/>
 </div>
 
 ```dart
@@ -410,7 +410,7 @@ showModalBottomSheet(
 
 #### 6. Glass Text Field
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Text Field"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/images/components2.jpg" width="300" alt="Glass Text Field"/>
 </div>
 
 ```dart
@@ -437,7 +437,7 @@ GlassTextField(
 
 #### 7. Glass Progress Indicator
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Progress Indicator"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/gif/components_gif.gif" width="300" alt="Glass Progress Indicator"/>
 </div>
 
 ```dart
@@ -457,7 +457,7 @@ GlassProgressIndicator(
 
 #### 8. Glass Slider
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Glass Slider"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/images/components.jpg" width="300" alt="Glass Slider"/>
 </div>
 
 ```dart
@@ -477,7 +477,7 @@ GlassSlider(
 
 #### 9. Animated Glass Container
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/components.gif" width="300" alt="Animated Glass Container"/>
+  <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/screenshots/gif/components_gif.gif" width="300" alt="Animated Glass Container"/>
 </div>
 
 ```dart

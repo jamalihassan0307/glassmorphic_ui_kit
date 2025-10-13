@@ -10,6 +10,8 @@ export 'src/widgets/glass_button.dart';
 export 'src/widgets/glass_card.dart';
 export 'src/widgets/glass_dialog.dart';
 export 'src/widgets/glass_bottom_sheet.dart';
+export 'src/widgets/glass_bottom_navigation_bar.dart';
+export 'src/widgets/glass_drawer.dart';
 export 'src/widgets/glass_list_tile.dart';
 export 'src/widgets/glass_menu_button.dart';
 export 'src/widgets/glass_navigation_bar.dart';

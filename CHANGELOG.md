@@ -1,3 +1,15 @@
+## 1.1.6
+
+* Documentation and assets improvements:
+  - Updated all screenshot paths to use GitHub raw URLs
+  - Reorganized screenshots into gif and images folders for better organization
+  - Enhanced visual documentation with proper categorization
+  - Updated image references to match new folder structure
+* Repository organization:
+  - Improved screenshots directory structure
+  - Better asset management and organization
+  - Enhanced maintainability of visual documentation
+
 ## 1.1.5
 
 * AddShort & Impactful description :
