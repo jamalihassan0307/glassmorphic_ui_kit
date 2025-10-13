@@ -62,13 +62,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         children: [DrawerContent()],
       ),
       body: Container(
+        width: double.infinity,
+        height: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
+            stops: [0.0, 0.3, 0.7, 1.0],
             colors: [
-              Color(0xFF1E88E5), // Colors.blue.shade600
-              Color(0xFF8E24AA), // Colors.purple.shade600
+              Color(0xFF667eea),
+              Color(0xFF764ba2),
+              Color(0xFFf093fb),
+              Color(0xFFf5576c),
             ],
           ),
         ),

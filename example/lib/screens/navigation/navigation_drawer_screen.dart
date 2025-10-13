@@ -8,10 +8,10 @@ class NavigationDrawerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExampleScreen(
-      title: 'Navigation Drawer',
+      title: 'Navigation Alert',
       children: [
         const Text(
-          'Basic Navigation Drawer',
+          'Basic Navigation Alert',
           style: TextStyle(
             color: Colors.white,
             fontSize: 24,
@@ -73,7 +73,7 @@ class NavigationDrawerScreen extends StatelessWidget {
                 },
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
-                  child: Text('Show Basic Drawer',
+                  child: Text('Show Basic Alert',
                       style: TextStyle(color: Colors.white)),
                 ),
               ),
@@ -82,7 +82,7 @@ class NavigationDrawerScreen extends StatelessWidget {
         ),
         const SizedBox(height: 32),
         const Text(
-          'Customized Navigation Drawer',
+          'Customized Navigation Alert',
           style: TextStyle(
             color: Colors.white,
             fontSize: 24,
@@ -157,7 +157,7 @@ class NavigationDrawerScreen extends StatelessWidget {
                     Colors.blue.withAlpha(51),
                   ],
                 ),
-                child: const Text('Show Custom Drawer',
+                child: const Text('Show Custom Alert',
                     style: TextStyle(color: Colors.white)),
               ),
             ],

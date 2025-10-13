@@ -23,11 +23,20 @@ class HomeContent extends StatelessWidget {
             'Glassmorphic UI Kit',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 32,
-              fontWeight: FontWeight.bold,
+              fontSize: 36,
+              fontWeight: FontWeight.w300,
+              letterSpacing: 1.5,
             ),
           ),
-          const SizedBox(height: 20),
+          const Text(
+            'Demo Gallery',
+            style: TextStyle(
+              color: Colors.white70,
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          const SizedBox(height: 30),
           _buildAnimatedCard(),
           const SizedBox(height: 30),
           _buildFeatureCards(),
@@ -45,29 +54,45 @@ class HomeContent extends StatelessWidget {
         scale: scaleAnimation,
         child: GlassCard(
           width: double.infinity,
-          height: 200,
-          blur: 20,
-          borderRadius: BorderRadius.circular(20),
+          height: 220,
+          blur: 25,
+          borderRadius: BorderRadius.circular(25),
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Colors.white.withAlpha(51),
-              Colors.white.withAlpha(26),
+              Colors.white.withOpacity(0.25),
+              Colors.white.withOpacity(0.1),
             ],
           ),
-          child: const Center(
+          child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.auto_awesome, color: Colors.white, size: 48),
-                SizedBox(height: 16),
-                Text(
-                  "Animated Glass Card",
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white12,
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: const Icon(Icons.auto_awesome, color: Colors.white, size: 48),
+                ),
+                const SizedBox(height: 20),
+                const Text(
+                  "Welcome to the Future",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                const Text(
+                  "Experience glassmorphism design",
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 16,
                   ),
                 ),
               ],
@@ -83,22 +108,39 @@ class HomeContent extends StatelessWidget {
       children: [
         Expanded(
           child: GlassCard(
-            height: 120,
-            blur: 15,
-            borderRadius: BorderRadius.circular(15),
+            height: 140,
+            blur: 20,
+            borderRadius: BorderRadius.circular(20),
             gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
               colors: [
-                Colors.blue.withAlpha(77),
-                Colors.blue.withAlpha(26),
+                Colors.cyan.withOpacity(0.3),
+                Colors.blue.withOpacity(0.1),
               ],
             ),
             child: const Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.blur_on, color: Colors.white),
-                  SizedBox(height: 8),
-                  Text("Blur Effect", style: TextStyle(color: Colors.white)),
+                  Icon(Icons.blur_on, color: Colors.white, size: 36),
+                  SizedBox(height: 12),
+                  Text(
+                    "Blur Effects",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    "Smooth glass",
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 12,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -107,22 +149,39 @@ class HomeContent extends StatelessWidget {
         const SizedBox(width: 20),
         Expanded(
           child: GlassCard(
-            height: 120,
-            blur: 15,
-            borderRadius: BorderRadius.circular(15),
+            height: 140,
+            blur: 20,
+            borderRadius: BorderRadius.circular(20),
             gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
               colors: [
-                Colors.purple.withAlpha(77),
-                Colors.purple.withAlpha(26),
+                Colors.pink.withOpacity(0.3),
+                Colors.purple.withOpacity(0.1),
               ],
             ),
             child: const Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.gradient, color: Colors.white),
-                  SizedBox(height: 8),
-                  Text("Gradient", style: TextStyle(color: Colors.white)),
+                  Icon(Icons.gradient, color: Colors.white, size: 36),
+                  SizedBox(height: 12),
+                  Text(
+                    "Gradients",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    "Beautiful colors",
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 12,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -136,51 +195,65 @@ class HomeContent extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          GlassButton(
-            onPressed: () => Dialogs.showGlassDialog(context),
-            blur: 10,
-            borderRadius: BorderRadius.circular(30),
-            gradient: LinearGradient(
-              colors: [
-                Colors.blue.withAlpha(77),
-                Colors.purple.withAlpha(51),
-              ],
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-            child: const Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(Icons.info_outline, color: Colors.white),
-                SizedBox(width: 8),
-                Text(
-                  "Show Glass Dialog",
-                  style: TextStyle(color: Colors.white, fontSize: 16),
-                ),
-              ],
+          SizedBox(
+            width: double.infinity,
+            child: GlassButton(
+              onPressed: () => Dialogs.showGlassDialog(context),
+              blur: 15,
+              borderRadius: BorderRadius.circular(25),
+              gradient: LinearGradient(
+                colors: [
+                  Colors.white.withOpacity(0.25),
+                  Colors.white.withOpacity(0.1),
+                ],
+              ),
+              padding: const EdgeInsets.symmetric(vertical: 18),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.info_outline, color: Colors.white, size: 24),
+                  SizedBox(width: 12),
+                  Text(
+                    "Show Glass Dialog",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-          const SizedBox(height: 20),
-          GlassButton(
-            onPressed: () => Dialogs.showGlassBottomSheet(context),
-            blur: 10,
-            borderRadius: BorderRadius.circular(30),
-            gradient: LinearGradient(
-              colors: [
-                Colors.purple.withAlpha(77),
-                Colors.blue.withAlpha(51),
-              ],
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-            child: const Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(Icons.swipe_up, color: Colors.white),
-                SizedBox(width: 8),
-                Text(
-                  "Show Bottom Sheet",
-                  style: TextStyle(color: Colors.white, fontSize: 16),
-                ),
-              ],
+          const SizedBox(height: 15),
+          SizedBox(
+            width: double.infinity,
+            child: GlassButton(
+              onPressed: () => Dialogs.showGlassBottomSheet(context),
+              blur: 15,
+              borderRadius: BorderRadius.circular(25),
+              gradient: LinearGradient(
+                colors: [
+                  Colors.white.withOpacity(0.15),
+                  Colors.white.withOpacity(0.05),
+                ],
+              ),
+              padding: const EdgeInsets.symmetric(vertical: 18),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.swipe_up, color: Colors.white70, size: 24),
+                  SizedBox(width: 12),
+                  Text(
+                    "Show Bottom Sheet",
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

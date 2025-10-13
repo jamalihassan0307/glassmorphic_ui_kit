@@ -7,14 +7,14 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GlassNavigationDrawer(
-      blur: 10,
-      opacity: 0.2,
-      gradient: LinearGradient(
+      blur: 15,
+      opacity: 0.15,
+      gradient: const LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
         colors: [
-          Colors.white.withAlpha(51),
-          Colors.white.withAlpha(26),
+          Color(0x40FFFFFF), // Colors.white.withOpacity(0.25)
+          Color(0x1AFFFFFF), // Colors.white.withOpacity(0.1)
         ],
       ),
       children: [
@@ -57,26 +57,42 @@ class AppDrawer extends StatelessWidget {
 
   Widget _buildHeader() {
     return Container(
-      padding: const EdgeInsets.all(16),
-      child: const Column(
+      padding: const EdgeInsets.all(20),
+      child: Column(
         children: [
-          CircleAvatar(
-            radius: 40,
-            backgroundColor: Colors.white24,
-            child: Icon(Icons.auto_awesome, color: Colors.white, size: 40),
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.1),
+              borderRadius: BorderRadius.circular(60),
+              border: Border.all(
+                color: Colors.white.withOpacity(0.2),
+                width: 1,
+              ),
+            ),
+            child: const Icon(
+              Icons.auto_awesome,
+              color: Colors.white,
+              size: 40,
+            ),
           ),
-          SizedBox(height: 16),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             'Glassmorphic UI Kit',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 20,
+              fontSize: 24,
               fontWeight: FontWeight.bold,
+              letterSpacing: 0.5,
             ),
           ),
-          Text(
+          const SizedBox(height: 8),
+          const Text(
             'Example Gallery',
-            style: TextStyle(color: Colors.white70),
+            style: TextStyle(
+              color: Colors.white70,
+              fontSize: 16,
+            ),
           ),
         ],
       ),
@@ -89,18 +105,34 @@ class AppDrawer extends StatelessWidget {
     IconData icon,
     String route,
   ) {
-    return ListTile(
-      leading: Icon(icon, color: Colors.white70),
-      title: Text(
-        title,
-        style: const TextStyle(color: Colors.white),
+    final isSelected = ModalRoute.of(context)?.settings.name == route;
+    
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: isSelected ? Colors.white.withOpacity(0.15) : null,
       ),
-      onTap: () {
-        Navigator.pop(context); // Close the drawer
-        if (ModalRoute.of(context)?.settings.name != route) {
-          Navigator.pushNamed(context, route);
-        }
-      },
+      child: ListTile(
+        leading: Icon(
+          icon,
+          color: isSelected ? Colors.white : Colors.white70,
+          size: 22,
+        ),
+        title: Text(
+          title,
+          style: TextStyle(
+            color: isSelected ? Colors.white : Colors.white70,
+            fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
+          ),
+        ),
+        onTap: () {
+          Navigator.pop(context); // Close the drawer
+          if (!isSelected) {
+            Navigator.pushNamed(context, route);
+          }
+        },
+      ),
     );
   }
 }
