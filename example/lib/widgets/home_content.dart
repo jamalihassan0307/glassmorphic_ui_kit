@@ -61,8 +61,8 @@ class HomeContent extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Colors.white.withOpacity(0.25),
-              Colors.white.withOpacity(0.1),
+              Colors.white.withValues(alpha: 0.25),
+              Colors.white.withValues(alpha: 0.1),
             ],
           ),
           child: Center(
@@ -115,8 +115,8 @@ class HomeContent extends StatelessWidget {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                Colors.cyan.withOpacity(0.3),
-                Colors.blue.withOpacity(0.1),
+                Colors.cyan.withValues(alpha: 0.3),
+                Colors.blue.withValues(alpha: 0.1),
               ],
             ),
             child: const Center(
@@ -156,8 +156,8 @@ class HomeContent extends StatelessWidget {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                Colors.pink.withOpacity(0.3),
-                Colors.purple.withOpacity(0.1),
+                Colors.pink.withValues(alpha: 0.3),
+                Colors.purple.withValues(alpha: 0.1),
               ],
             ),
             child: const Center(
@@ -203,8 +203,8 @@ class HomeContent extends StatelessWidget {
               borderRadius: BorderRadius.circular(25),
               gradient: LinearGradient(
                 colors: [
-                  Colors.white.withOpacity(0.25),
-                  Colors.white.withOpacity(0.1),
+                  Colors.white.withValues(alpha: 0.25),
+                  Colors.white.withValues(alpha: 0.1),
                 ],
               ),
               padding: const EdgeInsets.symmetric(vertical: 18),
@@ -234,8 +234,8 @@ class HomeContent extends StatelessWidget {
               borderRadius: BorderRadius.circular(25),
               gradient: LinearGradient(
                 colors: [
-                  Colors.white.withOpacity(0.15),
-                  Colors.white.withOpacity(0.05),
+                  Colors.white.withValues(alpha: 0.15),
+                  Colors.white.withValues(alpha: 0.05),
                 ],
               ),
               padding: const EdgeInsets.symmetric(vertical: 18),

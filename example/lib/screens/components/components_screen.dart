@@ -19,11 +19,11 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
   int _selectedGradient = 0;
 
   final List<List<Color>> _gradients = [
-    [Colors.white.withOpacity(0.25), Colors.white.withOpacity(0.1)],
-    [Colors.blue.withOpacity(0.25), Colors.cyan.withOpacity(0.12)],
-    [Colors.purple.withOpacity(0.25), Colors.pink.withOpacity(0.12)],
-    [Colors.grey.withOpacity(0.4), Colors.black.withOpacity(0.2)],
-    [Colors.indigo.withOpacity(0.3), Colors.deepPurple.withOpacity(0.15)],
+    [Colors.white.withValues(alpha: 0.25), Colors.white.withValues(alpha: 0.1)],
+    [Colors.blue.withValues(alpha: 0.25), Colors.cyan.withValues(alpha: 0.12)],
+    [Colors.purple.withValues(alpha: 0.25), Colors.pink.withValues(alpha: 0.12)],
+    [Colors.grey.withValues(alpha: 0.4), Colors.black.withValues(alpha: 0.2)],
+    [Colors.indigo.withValues(alpha: 0.3), Colors.deepPurple.withValues(alpha: 0.15)],
   ];
 
   @override
@@ -132,7 +132,7 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                   borderRadius: BorderRadius.circular(20),
                   gradient: LinearGradient(
                     colors: _selectedGradient == 3 
-                      ? [Colors.black.withOpacity(0.4), Colors.grey.withOpacity(0.2)]
+                      ? [Colors.black.withValues(alpha: 0.4), Colors.grey.withValues(alpha: 0.2)]
                       : _gradients[_selectedGradient],
                   ),
                   child: Center(
@@ -233,9 +233,9 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                       onPressed: () {},
                       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
                       borderRadius: BorderRadius.circular(25),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: const Row(
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.touch_app, color: Colors.white, size: 20),
@@ -257,13 +257,13 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                       borderRadius: BorderRadius.circular(25),
                       gradient: LinearGradient(
                         colors: [
-                          Colors.purple.withOpacity(0.4),
-                          Colors.blue.withOpacity(0.3),
+                          Colors.purple.withValues(alpha: 0.4),
+                          Colors.blue.withValues(alpha: 0.3),
                         ],
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: const Row(
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.gradient, color: Colors.white, size: 20),
@@ -349,13 +349,13 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                       borderRadius: BorderRadius.circular(25),
                       gradient: LinearGradient(
                         colors: [
-                          Colors.teal.withOpacity(0.7),
-                          Colors.cyan.withOpacity(0.7),
+                          Colors.teal.withValues(alpha: 0.7),
+                          Colors.cyan.withValues(alpha: 0.7),
                         ],
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: const Row(
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.chat_bubble_outline, color: Colors.white, size: 20),
@@ -377,13 +377,13 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                       borderRadius: BorderRadius.circular(25),
                       gradient: LinearGradient(
                         colors: [
-                          Colors.orange.withOpacity(0.7),
-                          Colors.red.withOpacity(0.7),
+                          Colors.orange.withValues(alpha: 0.7),
+                          Colors.red.withValues(alpha: 0.7),
                         ],
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: const Row(
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.vertical_align_bottom, color: Colors.white, size: 20),
@@ -491,8 +491,8 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
             borderRadius: BorderRadius.circular(20),
             gradient: LinearGradient(
               colors: [
-                Colors.red.withOpacity(0.3),
-                Colors.pink.withOpacity(0.2),
+                Colors.red.withValues(alpha: 0.3),
+                Colors.pink.withValues(alpha: 0.2),
               ],
             ),
             child: const Row(
@@ -530,7 +530,7 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                 width: 50,
                 height: 5,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.3),
+                  color: Colors.white.withValues(alpha: 0.3),
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
@@ -561,8 +561,8 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                   borderRadius: BorderRadius.circular(25),
                   gradient: LinearGradient(
                     colors: [
-                      Colors.indigo.withOpacity(0.3),
-                      Colors.purple.withOpacity(0.2),
+                      Colors.indigo.withValues(alpha: 0.3),
+                      Colors.purple.withValues(alpha: 0.2),
                     ],
                   ),
                   child: const Row(

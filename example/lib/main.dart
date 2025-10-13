@@ -45,7 +45,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
   late Animation<Offset> _slideAnimation;
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
 
   @override
   void initState() {
@@ -98,8 +98,8 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             colors: [
-                              Colors.white.withOpacity(0.3),
-                              Colors.white.withOpacity(0.1),
+                              Colors.white.withValues(alpha: 0.3),
+                              Colors.white.withValues(alpha: 0.1),
                             ],
                           ),
                           borderRadius: BorderRadius.circular(60),
@@ -157,8 +157,8 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
                           'Components',
                           'Rich UI\nelements',
                           [
-                            Colors.blue.withOpacity(0.9),
-                            Colors.cyan.withOpacity(0.5),
+                            Colors.blue.withValues(alpha: 0.9),
+                            Colors.cyan.withValues(alpha: 0.5),
                           ],
                           '/components',
                           context,
@@ -171,8 +171,8 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
                           'Customizable',
                           'Easy to\ncustomize',
                           [
-                            Colors.purple.withOpacity(0.6),
-                            Colors.pink.withOpacity(0.3),
+                            Colors.purple.withValues(alpha: 0.6),
+                            Colors.pink.withValues(alpha: 0.3),
                           ],
                           '/navigation/drawer',
                           context,
@@ -192,8 +192,8 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
                           'Navigation',
                           'Bars',
                           [
-                            Colors.orange.withOpacity(0.6),
-                            Colors.red.withOpacity(0.3),
+                            Colors.orange.withValues(alpha: 0.6),
+                            Colors.red.withValues(alpha: 0.3),
                           ],
                           '/navigation/bar',
                           context,
@@ -206,10 +206,9 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
                           'Tabs',
                           'Navigation Rails',
                           [
-                            Colors.red.withOpacity(0.6),
-                            Colors.orange.withOpacity(0.3),
+                            Colors.red.withValues(alpha: 0.6),
+                            Colors.orange.withValues(alpha: 0.3),
                           ],
-                         
                           '/navigation/rail',
                           context,
                         ),
@@ -281,12 +280,12 @@ class _AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: EdgeInsets.all(24.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: const [
+          children: [
             Icon(Icons.info_outline, size: 56, color: Colors.white70),
             SizedBox(height: 12),
             Text(

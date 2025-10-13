@@ -21,7 +21,7 @@ class DrawerContent extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'John Doe',
+                    'Ali Hassan',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -29,7 +29,7 @@ class DrawerContent extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'john.doe@example.com',
+                    'jamalihassan0307@gmail.com',
                     style: TextStyle(color: Colors.white70),
                   ),
                 ],

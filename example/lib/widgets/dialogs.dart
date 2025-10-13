@@ -11,8 +11,8 @@ class Dialogs {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Colors.white.withOpacity(0.25),
-            Colors.white.withOpacity(0.1),
+            Colors.white.withValues(alpha: 0.25),
+            Colors.white.withValues(alpha: 0.1),
           ],
         ),
         borderRadius: BorderRadius.circular(25),
@@ -45,8 +45,8 @@ class Dialogs {
               borderRadius: BorderRadius.circular(20),
               gradient: LinearGradient(
                 colors: [
-                  Colors.white.withOpacity(0.25),
-                  Colors.white.withOpacity(0.1),
+                  Colors.white.withValues(alpha: 0.25),
+                  Colors.white.withValues(alpha: 0.1),
                 ],
               ),
               padding: const EdgeInsets.symmetric(vertical: 15),
@@ -77,8 +77,8 @@ class Dialogs {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Colors.white.withOpacity(0.25),
-            Colors.white.withOpacity(0.1),
+            Colors.white.withValues(alpha: 0.25),
+            Colors.white.withValues(alpha: 0.1),
           ],
         ),
         borderRadius: const BorderRadius.only(
@@ -93,7 +93,7 @@ class Dialogs {
               width: 50,
               height: 5,
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.3),
+                color: Colors.white.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
@@ -132,8 +132,8 @@ class Dialogs {
                   borderRadius: BorderRadius.circular(25),
                   gradient: LinearGradient(
                     colors: [
-                      Colors.white.withOpacity(0.25),
-                      Colors.white.withOpacity(0.1),
+                      Colors.white.withValues(alpha: 0.25),
+                      Colors.white.withValues(alpha: 0.1),
                     ],
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 18),

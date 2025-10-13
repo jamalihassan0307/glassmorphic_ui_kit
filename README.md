@@ -2,7 +2,7 @@
 
 <div align="center">
   <kbd>
-    <img src="https://github.com/jamalihassan0307/glassmorphic_ui_kit/blob/main/image/image.jpg?raw=true" width="250" alt="Jam Ali Hassan"/>
+    <img src="https://raw.githubusercontent.com/jamalihassan0307/glassmorphic_ui_kit/refs/heads/main/image/banner.png?raw=true" width="100%" alt="AI Chat Plus Banner"/>
   </kbd>
   
   <h1>🌟 Glassmorphic UI Kit 🌟</h1>
@@ -110,7 +110,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  glassmorphic_ui_kit: ^1.1.5
+  glassmorphic_ui_kit: ^1.1.6
 ```
 
 
